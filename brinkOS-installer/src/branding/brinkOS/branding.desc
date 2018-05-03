@@ -12,7 +12,7 @@ strings:
 
 images:
     productLogo:         "logo.png"
-    productIcon:         "logo.png"
+    productIcon:         "icon.png"
     productWelcome:      "logo.png"
 
 slideshow:               "show.qml"
