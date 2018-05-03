@@ -1,0 +1,23 @@
+---
+componentName:  brinkOS
+
+strings:
+    productName:         brinkOS
+    shortProductName:    brinkOS
+    version:             2018.05.01
+    shortVersion:        latest
+    versionedName:       brinkOS 2018.05.01 latest
+    shortVersionedName:  brinkOS latest
+    bootloaderEntryName: brinkOS
+
+images:
+    productLogo:         "logo.png"
+    productIcon:         "logo.png"
+    productWelcome:      "logo.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#292F34"
+   sidebarText:          "#FFFFFF"
+   sidebarTextSelect:    "#292F34"
