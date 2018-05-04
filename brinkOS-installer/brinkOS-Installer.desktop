@@ -1,9 +1,13 @@
 [Desktop Entry]
-Name=Install brinkOS
-GenericName=Live Installer
-Comment=Install the operating system to disk
-Exec=su -c "QT_QPA_PLATFORMTHEME=qt5ct QT_STYLE_OVERRIDE=gtk2 calamares -d 2>&1 | tee /tmp/calamares.log"
-Icon=/usr/share/brinkOS/icons/icon.png
-Terminal=False
 Type=Application
-Categories=System;
+Version=1.0
+Name=Install brinkOS
+GenericName=System Installer
+Keywords=calamares;system;installer
+TryExec=calamares
+Exec=pkexec /usr/bin/calamares
+Comment=Calamares — System Installer
+Icon=/usr/share/brinkOS/icons/icon.png
+Terminal=false
+StartupNotify=true
+Categories=Qt;System;
