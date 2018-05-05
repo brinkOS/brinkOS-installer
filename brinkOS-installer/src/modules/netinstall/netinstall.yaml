@@ -6,7 +6,6 @@
   packages:
     - brinkOS-antigen
     - brinkOS-assets
-    - brinkOS-gdm-plymouth
     - brinkOS-icons
     - brinkOS-installer
     - brinkOS-libcgroup
@@ -66,6 +65,9 @@
     - jdk10-openjdk
     - jq
     - libmtp
+    - lightdm 
+    - lightdm-gtk-greeter
+    - lightdm-gtk-greeter-settings
     - linux-firmware
     - linux-headers
     - mesa
