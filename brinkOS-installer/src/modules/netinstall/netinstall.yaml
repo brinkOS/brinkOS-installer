@@ -1,203 +1,286 @@
-- name: "Default"
-  description: "Default group"
-  hidden: true
+- name: "brinkOS Base"
+  description: "Base Install"
+  hidden: false
   selected: true
-  critical: false
+  critical: true
   packages:
-    - base
-    - chakra-live-skel
-    - cdemu-client
-    - lsb-release
-    - avahi
-    - grub
-    # disk utils
-    - dosfstools
-    - e2fsprogs
-    - fuse
-    - gptfdisk
-    - jfsutils
-    - ntfs-3g
-    - reiserfsprogs
-    - xfsprogs
-    # power
-    - acpi_call
-    - pmtools
-    # network
-    - dnsutils
-    - iputils
-    - netcfg
-    - xinetd
-    # firmwares
-    - alsa-firmware
-    - linux-firmware
-    # sound
-    - alsa-lib
+    - brinkOS-antigen
+    - brinkOS-assets
+    - brinkOS-gdm-plymouth
+    - brinkOS-icons
+    - brinkOS-installer
+    - brinkOS-libcgroup
+    - brinkOS-liquidprompt
+    - brinkOS-nemo-compare
+    - brinkOS-networkmanager-ssh
+    - brinkOS-oor
+    - brinkOS-pamac
+    - brinkOS-pix
+    - brinkOS-plymouth
+    - brinkOS-plymouth-theme
+    - brinkOS-tag-ag
+    - brinkOS-terminal
+    - brinkOS-theme
+    - brinkOS-vim-colors
+    - brinkOS-wallpapers
+    - brinkOS-xed
+    - brinkOS-xplayer
+    - brinkOS-xplayer-plparser
+    - brinkOS-xviewer
     - alsa-utils
-    - gstreamer
-    - gst-plugins-good
-    - gst-plugins-bad
-    - libao
-    - libcanberra-gstreamer
-    - libcanberra-pulse
-    - pulseaudio
-    - pulseaudio-alsa
-    # tools
+    - autoconf
+    - automake
+    - b43-fwcutter
+    - base
     - bash-completion
-    - hwinfo
-    - lsof
-    - man-db
+    - bind-tools
+    - boost
+    - boost-libs
+    - broadcom-wl-dkms
+    - cinnamon
+    - crda
+    - docker
+    - docker
+    - docker-compose
+    - dosfstools
+    - efitools
+    - exfat-utils
+    - fakeroot
+    - fuse-exfat
+    - git
+    - gnome-screenshot
+    - grub
+    - gst-libav
+    - gst-plugins-base
+    - gst-plugins-good
+    - gst-plugins-ugly
+    - gstreamer
+    - gtkmm3
+    - gucharmap
+    - gzip
+    - haveged
+    - hunspell
+    - icu
+    - ipw2100-fw
+    - ipw2200-fw
+    - jdk10-openjdk
+    - jq
+    - libmtp
+    - linux-firmware
+    - linux-headers
+    - mesa
+    - mesa
+    - mesa-libgl
+    - mesa-vdpau
     - mlocate
-    - nano
+    - modemmanager
+    - mtools
+    - nemo-fileroller
+    - nemo-preview
+    - nemo-seahorse
+    - nemo-share
+    - net-tools
+    - networkmanager-openvpn
+    - networkmanager-pptp
+    - npm
+    - ntfs-3g
+    - ntp
     - openssh
+    - openvpn
+    - os-prober
+    - php
+    - pkgfile
+    - powerline
+    - powerline-fonts
+    - python-lxml
+    - python-mako
+    - python-mock
+    - readline
+    - refind-efi
+    - rfkill
+    - samba
+    - smartmontools
+    - splix
+    - strace
     - sudo
-    - vim
-    - zsh # :D
-    # archivers
-    - p7zip
-    - unarj
+    - tar
+    - tlp
+    - tmux
+    - ttf-arphic-uming
+    - ttf-baekmuk
+    - ttf-bitstream-vera
+    - ttf-dejavu
+    - ttf-droid
+    - ttf-freefont
+    - ttf-liberation
     - unrar
     - unzip
-    - zip
-    # xorg base
-    - xorg
-    - xorg-apps
-    - xorg-fonts-alias
-    - xorg-fonts-encodings
-    - xorg-fonts-misc
-    - xorg-res-utils
+    - usb_modeswitch
+    - wget
+    - whois
+    - wireless_tools
+    - wpa_actiond
+    - x264
+    - xdg-user-dirs-gtk
+    - xf86-input-libinput
+    - xf86-input-vmmouse
+    - xf86-video-vmware
+    - xorg-fonts
     - xorg-server
-    - xorg-server-utils
-    - xorg-xauth
     - xorg-xinit
-    - xorg-xkb-utils
-    # xorg video drivers
-    - xf86-video-apm
-    - xf86-video-ark
-    - xf86-video-ati
-    - xf86-video-chips
-    - xf86-video-cirrus
-    - xf86-video-glint
-    - xf86-video-i128
-    - xf86-video-i740
-    - xf86-video-intel
-    - xf86-video-mach64
-    - xf86-video-mga
-    - xf86-video-neomagic
-    - xf86-video-nouveau
-    - xf86-video-nv
-    - xf86-video-openchrome
-    - xf86-video-r128
-    - xf86-video-rendition
-    - xf86-video-s3
-    - xf86-video-s3virge
-    - xf86-video-savage
-    - xf86-video-siliconmotion
-    - xf86-video-sisusb
-    - xf86-video-tdfx
-    - xf86-video-trident
-    - xf86-video-tseng
-    - xf86-video-v4l
-    - xf86-video-vesa
-    - xf86-video-voodoo
-    - mesa-libgl
-    # xorg input drivers
-    - xf86-input-synaptics
-    - xf86-input-wacom
-    - xf86-input-evdev
-    - xf86-input-keyboard
-    - xf86-input-mouse
-    # fonts
-    - terminus-font
-    - ttf-dejavu
-    - ttf-liberation
-    - wqy-microhei
-    - xorg-fonts-100dpi
-    - xorg-fonts-75dpi
-    - xorg-fonts-cyrillic
-    # additional stuff that needs xorg
-    - hicolor-icon-theme
-    # kde
-    - chakra-common
-    - qt
-    - kde-baseapps
-    - kde-baseapps-dolphin
-    - kde-baseapps-konsole
-    - kde-runtime
-    - kde-workspace
-    - kdelibs
-    - kdepimlibs
-    - kdemultimedia-kmix
-    - oxygen-icons
-    - phonon-backend-gstreamer
-    # chakra theme (including kapudan options)
-    - chakra-wallpapers-dharma
-    - chakra-wallpapers-curie
-    - chakra-wallpapers-descartes
-    - grub2-themes-sirius
-    - kapudan-kde-themes-caledonia
-    - kde-kdm-themes-sirius
-    - kde-ksplash-themes-sirius
-    - kde-plasma-themes-caledonia
-    - python2-imaging
-    - python2-v4l2capture
-    - python2-xlib
-    - caledonia-colors
-    - yakuake-themes-ronak
-    # kde (everything else)
-    - kdeadmin-kcron
-    - kdeadmin-kuser
-    - kdeplasma-addons-applets-icontasks
-    - kdesdk-kate
-    - kdeutils-ark
-    - kdeutils-kgpg
-    - kdeutils-sweeper
-    # kde network
-    - kdeplasma-applets-plasma-nm
-    - networkmanager-dispatcher-ntpd
-    - kcm-ufw
-    # applications
-    - rekonq
-    - yakuake
-    # enable systemd-units
-    - chakra-init-live
-    # overlay pkgs
-    - partitionmanager
-    - octopi-notifier
-    - kapudan
-- name: "Wireless"
-  description: "Tools for wireless connections"
+    - xorg-xkill
+    - xterm
+    - xz
+    - zd1211-firmware
+    - zsh
+
+
+- name: "Development"
+  description: "Programming Languages, Compilers and Tools."
   critical: false
   packages:
-    - crda
-    - ndiswrapper
-    - usb-modeswitch
-    - wireless-regdb
-    - wireless_tools
-    - wpa_supplicant
-- name: "CCR"
-  description: "Tools for the Chakra Community Repository"
-  packages:
-    - ccr
     - base-devel
-- name: "Graphics"
-  description: "Applications to work with graphics"
-  packages:
-    - kdegraphics-gwenview
-    - kdegraphics-kamera
-    - kdegraphics-kcolorchooser
-    - kdegraphics-kgamma
-    - kdegraphics-kolourpaint
-    - kdegraphics-kruler
-    - kdegraphics-ksaneplugin
-    - kdegraphics-ksnapshot
-    - kdegraphics-libkdcraw
-    - kdegraphics-libkexiv2
-    - kdegraphics-libkipi
-    - kdegraphics-libksane
-    - kdegraphics-mobipocket
-    - kdegraphics-okular
-    - kdegraphics-strigi-analyzer
-    - kdegraphics-svgpart
-    - kdegraphics-thumbnailers
-    - imagemagick
+    - clang
+    - elixir
+    - erlang
+    - gdb
+    - go
+    - meld
+    - nodejs
+    - python
+    - python-pip
+    - ruby
+    - rust
+    - valgrind
 
+- name: "ZFS"
+  description: "ZFS Kenerel Modules and tools."
+  critical: false
+  packages:
+    - brinkOS-spl
+    - brinkOS-spl-headers
+    - brinkOS-spl-utils-common
+    - brinkOS-zfs
+    - brinkOS-zfs-headers
+    - brinkOS-zfs-utils-common
+
+- name: "Dropbox"
+  description: "Dropbox application & nemo integration."
+  critical: false
+  packages:
+    - brinkOS-dropbox
+    - brinkOS-dropbox-cli
+    - brinkOS-nemo-dropbox
+
+- name: "VS-Code"
+  description: "Visual Studio Code"
+  critical: false
+  packages:
+    - brinkOS-code
+
+- name: "Atom"
+  description: "Atom text editor."
+  critical: false
+  packages:
+    - atom
+
+- name: "Slack"
+  description: "Slack Desktop Application."
+  critical: false
+  packages:
+    - brinkOS-slack
+
+- name: "Simplenote"
+  description: "Simplenote electon app."
+  critical: false
+  selected: true
+  packages:
+    - brinkOS-simplenote
+
+- name: "Blockchain"
+  description: "Blockchain and crypto related packages."
+  critical: false
+  selected: true
+  packages:
+    - brinkOS-nexus
+    - go-ethereum
+    - solidity
+
+- name: "Google Chrome"
+  description: "Google Chrome Web Browser."
+  critical: false
+  selected: true
+  packages:
+    - brinkOS-google-chrome
+
+- name: "Wire"
+  description: "Wire messenger."
+  critical: false
+  selected: true
+  packages:
+    - brinkOS-wire
+
+- name: "Apple Support"
+  description: "Packages useful for Apple computers"
+  critical: false
+  selected: true
+  packages:
+    - brinkOS-hfsprogs
+
+- name: "AWS"
+  description: "AWS Cli"
+  critical: false
+  selected: true
+  packages:
+    - aws-cli
+    - python2-boto3
+    - python2-pyopenssl
+    - python2-systemd
+
+- name: "IPFS"
+  description: "InterPlanetary File System"
+  critical: false
+  selected: true
+  packages:
+    - brinkOS-ipget
+    - go-ipfs
+
+- name: "VM Guest"
+  description: "Virtualbox & VMware Guest modules and tools."
+  critical: false
+  selected: true
+  packages:
+    - virtualbox-guest-utils
+    - virtualbox-guest-modules-arch
+    - open-vm-tools
+
+- name: "MISC"
+  description: "Misc packages."
+  critical: false
+  selected: true
+  packages:
+    - ansible
+    - calibre
+    - cgmanager
+    - cpulimit
+    - dnscrypt-proxy
+    - emacs
+    - filezilla
+    - gimp
+    - gparted
+    - hexchat
+    - htop
+    - inkscape
+    - kcachegrind
+    - kitty
+    - librsvg
+    - messengerfordesktop
+    - ntfs-3g
+    - poppler-glib
+    - screen
+    - the_silver_searcher
+    - transmission-cli
+    - transmission-gtk
+    - virtualbox
+    - vlc
+    - wireshark-gtk
