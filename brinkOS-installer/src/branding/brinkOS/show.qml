@@ -34,7 +34,7 @@ Presentation
 
         Image {
             id: background
-            source: "logo.png"
+            source: "logo.svg"
             fillMode: Image.PreserveAspectFit
             anchors.centerIn: parent
         }

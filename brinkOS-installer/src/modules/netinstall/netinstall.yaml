@@ -1,8 +1,10 @@
+# These are disabled and hidden as
+# they are included on the base filesystem.
 - name: "brinkOS Base"
   description: "Base Install"
   hidden: true
-  selected: true
-  critical: true
+  selected: false
+  critical: false
   packages:
     - alsa-utils
     - b43-fwcutter
