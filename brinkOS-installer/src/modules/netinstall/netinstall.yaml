@@ -4,41 +4,23 @@
   selected: true
   critical: true
   packages:
-    - brinkOS-antigen
-    - brinkOS-assets
-    - brinkOS-icons
-    - brinkOS-installer
-    - brinkOS-libcgroup
-    - brinkOS-liquidprompt
-    - brinkOS-nemo-compare
-    - brinkOS-networkmanager-ssh
-    - brinkOS-oor
-    - brinkOS-pamac
-    - brinkOS-pix
-    - brinkOS-plymouth
-    - brinkOS-plymouth-theme
-    - brinkOS-tag-ag
-    - brinkOS-terminal
-    - brinkOS-theme
-    - brinkOS-vim-colors
-    - brinkOS-wallpapers
-    - brinkOS-xed
-    - brinkOS-xplayer
-    - brinkOS-xplayer-plparser
-    - brinkOS-xviewer
     - alsa-utils
-    - autoconf
-    - automake
     - b43-fwcutter
     - base
     - bash-completion
     - bind-tools
-    - boost
-    - boost-libs
+    - brinkOS-assets
+    - brinkOS-icons
+    - brinkOS-liquidprompt
+    - brinkOS-pamac
+    - brinkOS-plymouth
+    - brinkOS-plymouth-theme
+    - brinkOS-terminal
+    - brinkOS-theme
+    - brinkOS-wallpapers
     - broadcom-wl-dkms
     - cinnamon
     - crda
-    - docker
     - docker
     - docker-compose
     - dosfstools
@@ -46,14 +28,8 @@
     - exfat-utils
     - fakeroot
     - fuse-exfat
-    - git
     - gnome-screenshot
     - grub
-    - gst-libav
-    - gst-plugins-base
-    - gst-plugins-good
-    - gst-plugins-ugly
-    - gstreamer
     - gtkmm3
     - gucharmap
     - gzip
@@ -62,14 +38,10 @@
     - icu
     - ipw2100-fw
     - ipw2200-fw
-    - jdk10-openjdk
-    - jq
     - libmtp
     - lightdm 
     - lightdm-gtk-greeter
-    - lightdm-gtk-greeter-settings
     - linux-firmware
-    - linux-headers
     - mesa
     - mesa
     - mesa-libgl
@@ -77,30 +49,17 @@
     - mlocate
     - modemmanager
     - mtools
-    - nemo-fileroller
-    - nemo-preview
-    - nemo-seahorse
-    - nemo-share
     - net-tools
-    - networkmanager-openvpn
-    - networkmanager-pptp
-    - npm
     - ntfs-3g
     - ntp
     - openssh
-    - openvpn
     - os-prober
-    - php
     - pkgfile
     - powerline
     - powerline-fonts
-    - python-lxml
-    - python-mako
-    - python-mock
     - readline
     - refind-efi
     - rfkill
-    - samba
     - smartmontools
     - splix
     - strace
@@ -108,21 +67,11 @@
     - tar
     - tlp
     - tmux
-    - ttf-arphic-uming
-    - ttf-baekmuk
-    - ttf-bitstream-vera
-    - ttf-dejavu
-    - ttf-droid
-    - ttf-freefont
-    - ttf-liberation
-    - unrar
-    - unzip
     - usb_modeswitch
     - wget
     - whois
     - wireless_tools
     - wpa_actiond
-    - x264
     - xdg-user-dirs-gtk
     - xf86-input-libinput
     - xf86-input-vmmouse
@@ -135,20 +84,76 @@
     - xz
     - zd1211-firmware
     - zsh
+    - virtualbox-guest-utils
+    - virtualbox-guest-modules-arch
+    - ttf-arphic-uming
+    - ttf-baekmuk
+    - ttf-bitstream-vera
+    - ttf-dejavu
+    - ttf-droid
+    - ttf-freefont
+    - ttf-liberation
 
+
+- name: "brinkOS Extra"
+  description: "brinkOS extra packages"
+  critical: false
+  selected: true
+  packages:
+    - brinkOS-antigen
+    - brinkOS-libcgroup
+    - brinkOS-nemo-compare
+    - brinkOS-networkmanager-ssh
+    - brinkOS-oor
+    - brinkOS-pix
+    - brinkOS-tag-ag
+    - brinkOS-vim-colors
+    - brinkOS-xed
+    - brinkOS-xplayer
+    - brinkOS-xplayer-plparser
+    - brinkOS-xviewer
+    - gst-libav
+    - gst-plugins-base
+    - gst-plugins-good
+    - gst-plugins-ugly
+    - gstreamer
+    - lightdm-gtk-greeter-settings
+    - nemo-fileroller
+    - nemo-preview
+    - nemo-seahorse
+    - nemo-share
+    - networkmanager-openvpn
+    - networkmanager-pptp
+    - openvpn
+    - python-lxml
+    - python-mako
+    - python-mock
+    - samba
+    - unrar
+    - unzip
+    - x264
 
 - name: "Development"
   description: "Programming Languages, Compilers and Tools."
   critical: false
+  selected: false
   packages:
     - base-devel
+    - boost
+    - boost-libs
     - clang
     - elixir
     - erlang
     - gdb
+    - git
     - go
+    - jq
+    - linux-headers
+    - jdk10-openjdk
     - meld
     - nodejs
+    - npm
+    - php
     - python
     - python-pip
     - ruby
@@ -158,6 +163,7 @@
 - name: "ZFS"
   description: "ZFS Kenerel Modules and tools."
   critical: false
+  selected: false
   packages:
     - brinkOS-spl
     - brinkOS-spl-headers
@@ -169,6 +175,7 @@
 - name: "Dropbox"
   description: "Dropbox application & nemo integration."
   critical: false
+  selected: false
   packages:
     - brinkOS-dropbox
     - brinkOS-dropbox-cli
@@ -177,32 +184,35 @@
 - name: "VS-Code"
   description: "Visual Studio Code"
   critical: false
+  selected: false
   packages:
     - brinkOS-code
 
 - name: "Atom"
   description: "Atom text editor."
   critical: false
+  selected: false
   packages:
     - atom
 
 - name: "Slack"
   description: "Slack Desktop Application."
   critical: false
+  selected: false
   packages:
     - brinkOS-slack
 
 - name: "Simplenote"
   description: "Simplenote electon app."
   critical: false
-  selected: true
+  selected: false
   packages:
     - brinkOS-simplenote
 
 - name: "Blockchain"
   description: "Blockchain and crypto related packages."
   critical: false
-  selected: true
+  selected: false
   packages:
     - brinkOS-nexus
     - go-ethereum
@@ -211,28 +221,28 @@
 - name: "Google Chrome"
   description: "Google Chrome Web Browser."
   critical: false
-  selected: true
+  selected: false
   packages:
     - brinkOS-google-chrome
 
 - name: "Wire"
   description: "Wire messenger."
   critical: false
-  selected: true
+  selected: false
   packages:
     - brinkOS-wire
 
 - name: "Apple Support"
   description: "Packages useful for Apple computers"
   critical: false
-  selected: true
+  selected: false
   packages:
     - brinkOS-hfsprogs
 
 - name: "AWS"
   description: "AWS Cli"
   critical: false
-  selected: true
+  selected: false
   packages:
     - aws-cli
     - python2-boto3
@@ -242,7 +252,7 @@
 - name: "IPFS"
   description: "InterPlanetary File System"
   critical: false
-  selected: true
+  selected: false
   packages:
     - brinkOS-ipget
     - go-ipfs
@@ -250,7 +260,7 @@
 - name: "VM Guest"
   description: "Virtualbox & VMware Guest modules and tools."
   critical: false
-  selected: true
+  selected: false
   packages:
     - virtualbox-guest-utils
     - virtualbox-guest-modules-arch
@@ -259,7 +269,7 @@
 - name: "MISC"
   description: "Misc packages."
   critical: false
-  selected: true
+  selected: false
   packages:
     - ansible
     - calibre
