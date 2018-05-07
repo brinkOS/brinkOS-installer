@@ -134,6 +134,8 @@
     - samba
     - unrar
     - unzip
+    - vim
+    - vim-plugins
     - x264
 
 - name: "Development"
@@ -150,9 +152,9 @@
     - gdb
     - git
     - go
+    - jdk10-openjdk
     - jq
     - linux-headers
-    - jdk10-openjdk
     - meld
     - nodejs
     - npm
@@ -161,6 +163,7 @@
     - python-pip
     - ruby
     - rust
+    - shellcheck
     - valgrind
 
 - name: "ZFS"
