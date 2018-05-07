@@ -12,6 +12,7 @@
     - bash-completion
     - bind-tools
     - brinkOS-assets
+    - brinkOS-google-chrome
     - brinkOS-icons
     - brinkOS-liquidprompt
     - brinkOS-pamac
@@ -69,7 +70,16 @@
     - tar
     - tlp
     - tmux
+    - ttf-arphic-uming
+    - ttf-baekmuk
+    - ttf-bitstream-vera
+    - ttf-dejavu
+    - ttf-droid
+    - ttf-freefont
+    - ttf-liberation
     - usb_modeswitch
+    - virtualbox-guest-modules-arch
+    - virtualbox-guest-utils
     - wget
     - whois
     - wireless_tools
@@ -86,15 +96,6 @@
     - xz
     - zd1211-firmware
     - zsh
-    - virtualbox-guest-utils
-    - virtualbox-guest-modules-arch
-    - ttf-arphic-uming
-    - ttf-baekmuk
-    - ttf-bitstream-vera
-    - ttf-dejavu
-    - ttf-droid
-    - ttf-freefont
-    - ttf-liberation
 
 
 - name: "brinkOS Extra"
