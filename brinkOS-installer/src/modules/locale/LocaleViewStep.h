@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014-2016, Teo Mrnjavac <teo@kde.org>
  *
@@ -76,7 +76,6 @@ private:
     QPair< QString, QString > m_startingTimezone;
     QString m_localeGenPath;
     QString m_geoipUrl;
-    QString m_geoipStyle;
 
     QList< Calamares::job_ptr > m_jobs;
 };

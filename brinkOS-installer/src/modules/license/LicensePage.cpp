@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2015, Anke Boersma <demm@kaosx.us>
  *   Copyright 2015, Alexandre Arnt <qtgzmanager@gmail.com>
@@ -186,7 +186,7 @@ LicensePage::setEntries( const QList< LicenseEntry >& entriesList )
                                  .arg( entry.prettyName )
                                  .arg( entry.prettyVendor );
             break;
-        default:
+        case LicenseEntry::Software:
             productDescription = tr( "<strong>%1</strong><br/>"
                                      "<font color=\"Grey\">by %2</font>" )
                                  .arg( entry.prettyName )

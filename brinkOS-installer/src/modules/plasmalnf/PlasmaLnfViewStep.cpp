@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2017, Adriaan de Groot <groot@kde.org>
  *
@@ -21,29 +21,13 @@
 #include "PlasmaLnfPage.h"
 #include "ThemeInfo.h"
 
+#include "utils/CalamaresUtils.h"
 #include "utils/Logger.h"
 
 #include <QProcess>
 #include <QVariantMap>
 
-#ifdef WITH_KCONFIG
-#include <KConfigGroup>
-#include <KSharedConfig>
-#endif
-
 CALAMARES_PLUGIN_FACTORY_DEFINITION( PlasmaLnfViewStepFactory, registerPlugin<PlasmaLnfViewStep>(); )
-
-static QString
-currentPlasmaTheme()
-{
-#ifdef WITH_KCONFIG
-    KConfigGroup cg( KSharedConfig::openConfig( QStringLiteral( "kdeglobals" ) ), "KDE" );
-    return cg.readEntry( "LookAndFeelPackage", QString() );
-#else
-    cWarning() << "No KConfig support, cannot determine Plasma theme.";
-    return QString();
-#endif
-}
 
 PlasmaLnfViewStep::PlasmaLnfViewStep( QObject* parent )
     : Calamares::ViewStep( parent )
@@ -120,10 +104,10 @@ void PlasmaLnfViewStep::onLeave()
 }
 
 
-QList<Calamares::job_ptr>
+Calamares::JobList
 PlasmaLnfViewStep::jobs() const
 {
-    QList<Calamares::job_ptr> l;
+    Calamares::JobList l;
 
     cDebug() << "Creating Plasma LNF jobs ..";
     if ( !m_themeId.isEmpty() )
@@ -131,7 +115,7 @@ PlasmaLnfViewStep::jobs() const
         if ( !m_lnfPath.isEmpty() )
             l.append( Calamares::job_ptr( new PlasmaLnfJob( m_lnfPath, m_themeId ) ) );
         else
-            cDebug() << "WARNING: no lnftool given for plasmalnf module.";
+            cWarning() << "no lnftool given for plasmalnf module.";
     }
     return l;
 }
@@ -140,36 +124,18 @@ PlasmaLnfViewStep::jobs() const
 void
 PlasmaLnfViewStep::setConfigurationMap( const QVariantMap& configurationMap )
 {
-    QString lnfPath;
-    if ( configurationMap.contains( "lnftool" ) && configurationMap.value( "lnftool" ).type() == QVariant::String )
-        lnfPath = configurationMap.value( "lnftool" ).toString();
-    m_lnfPath = lnfPath;
+    m_lnfPath = CalamaresUtils::getString( configurationMap, "lnftool" );
     m_widget->setLnfPath( m_lnfPath );
 
     if ( m_lnfPath.isEmpty() )
-        cDebug() << "WARNING: no lnftool given for plasmalnf module.";
+        cWarning() << "no lnftool given for plasmalnf module.";
 
-    QString liveUser;
-    if ( configurationMap.contains( "liveuser" ) && configurationMap.value( "liveuser" ).type() == QVariant::String )
-        liveUser = configurationMap.value( "liveuser" ).toString();
-    m_liveUser = liveUser;
-
-    QString preselect;
-    if ( configurationMap.contains( "preselect" ) && configurationMap.value( "preselect" ).type() == QVariant::String )
-        preselect = configurationMap.value( "preselect" ).toString();
-    if ( preselect == QStringLiteral( "*" ) )
-        preselect = currentPlasmaTheme();
-    if ( !preselect.isEmpty() )
-        m_widget->setPreselect( preselect );
-
-    bool showAll( false );
-    if ( configurationMap.contains( "showAll" ) && configurationMap.value( "showAll" ).type() == QVariant::Bool )
-        showAll = configurationMap.value( "showAll" ).toBool();
+    m_liveUser = CalamaresUtils::getString( configurationMap, "liveuser" );
 
     if ( configurationMap.contains( "themes" ) &&
         configurationMap.value( "themes" ).type() == QVariant::List )
     {
-        ThemeInfoList listedThemes;
+        ThemeInfoList allThemes;
         auto themeList = configurationMap.value( "themes" ).toList();
         // Create the ThemInfo objects for the listed themes; information
         // about the themes from Plasma (e.g. human-readable name and description)
@@ -178,14 +144,14 @@ PlasmaLnfViewStep::setConfigurationMap( const QVariantMap& configurationMap )
             if ( i.type() == QVariant::Map )
             {
                 auto iv = i.toMap();
-                listedThemes.append( ThemeInfo( iv.value( "theme" ).toString(), iv.value( "image" ).toString() ) );
+                allThemes.append( ThemeInfo( iv.value( "theme" ).toString(), iv.value( "image" ).toString() ) );
             }
             else if ( i.type() == QVariant::String )
-                listedThemes.append( ThemeInfo( i.toString() ) );
+                allThemes.append( ThemeInfo( i.toString() ) );
 
-        if ( listedThemes.length() == 1 )
-            cDebug() << "WARNING: only one theme enabled in plasmalnf";
-        m_widget->setEnabledThemes( listedThemes, showAll );
+        if ( allThemes.length() == 1 )
+            cWarning() << "only one theme enabled in plasmalnf";
+        m_widget->setEnabledThemes( allThemes );
     }
     else
         m_widget->setEnabledThemesAll();  // All of them
@@ -197,7 +163,7 @@ PlasmaLnfViewStep::themeSelected( const QString& id )
     m_themeId = id;
     if ( m_lnfPath.isEmpty() )
     {
-        cDebug() << "WARNING: no lnftool given for plasmalnf module.";
+        cWarning() << "no lnftool given for plasmalnf module.";
         return;
     }
 
@@ -209,17 +175,17 @@ PlasmaLnfViewStep::themeSelected( const QString& id )
 
     if ( !lnftool.waitForStarted( 1000 ) )
     {
-        cDebug() << "WARNING: could not start look-and-feel" << m_lnfPath;
+        cWarning() << "could not start look-and-feel" << m_lnfPath;
         return;
     }
     if ( !lnftool.waitForFinished() )
     {
-        cDebug() << "WARNING:" << m_lnfPath << "timed out.";
+        cWarning() << m_lnfPath << "timed out.";
         return;
     }
 
     if ( ( lnftool.exitCode() == 0 ) && ( lnftool.exitStatus() == QProcess::NormalExit ) )
         cDebug() << "Plasma look-and-feel applied" << id;
     else
-        cDebug() << "WARNING: could not apply look-and-feel" << id;
+        cWarning() << "could not apply look-and-feel" << id;
 }

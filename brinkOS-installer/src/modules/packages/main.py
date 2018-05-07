@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# === This file is part of Calamares - <http://github.com/calamares> ===
+# === This file is part of Calamares - <https://github.com/calamares> ===
 #
 #   Copyright 2014, Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
 #   Copyright 2015-2017, Teo Mrnjavac <teo@kde.org>
 #   Copyright 2016-2017, Kyle Robbertze <kyle@aims.ac.za>
 #   Copyright 2017, Alf Gaida <agaida@siduction.org>
+#   Copyright 2018, Adriaan de Groot <groot@kde.org>
 #
 #   Calamares is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU General Public License as published by
@@ -296,6 +297,19 @@ class PMDummy(PackageManager):
         libcalamares.utils.debug("Running script '" + str(script) + "'")
 
 
+class PMPisi(PackageManager):
+    backend = "pisi"
+
+    def install(self, pkgs, from_local=False):
+        check_target_env_call(["pisi", "install" "-y"] + pkgs)
+
+    def remove(self, pkgs):
+        check_target_env_call(["pisi", "remove", "-y"] + pkgs)
+
+    def update_db(self):
+        check_target_env_call(["pisi", "update-repo"])
+
+
 # Collect all the subclasses of PackageManager defined above,
 # and index them based on the backend property of each class.
 backend_managers = [
@@ -318,10 +332,7 @@ def subst_locale(plist):
     """
     locale = libcalamares.globalstorage.value("locale")
     if not locale:
-        # It is possible to skip the locale-setting entirely.
-        # Then pretend it is "en", so that {LOCALE}-decorated
-        # package names are removed from the list.
-        locale = "en"
+        return plist
 
     ret = []
     for packagedata in plist:
@@ -367,43 +378,43 @@ def run_operations(pkgman, entry):
     global group_packages, completed_packages, mode_packages
 
     for key in entry.keys():
-        package_list = subst_locale(entry[key])
-        group_packages = len(package_list)
+        entry[key] = subst_locale(entry[key])
+        group_packages = len(entry[key])
         if key == "install":
             _change_mode(INSTALL)
-            if all([isinstance(x, str) for x in package_list]):
-                pkgman.install(package_list)
+            if all([isinstance(x, str) for x in entry[key]]):
+                pkgman.install(entry[key])
             else:
-                for package in package_list:
+                for package in entry[key]:
                     pkgman.install_package(package)
         elif key == "try_install":
             _change_mode(INSTALL)
             # we make a separate package manager call for each package so a
             # single failing package won't stop all of them
-            for package in package_list:
+            for package in entry[key]:
                 try:
                     pkgman.install_package(package)
                 except subprocess.CalledProcessError:
-                    warn_text = "WARNING: could not install package "
+                    warn_text = "Could not install package "
                     warn_text += str(package)
-                    libcalamares.utils.debug(warn_text)
+                    libcalamares.utils.warning(warn_text)
         elif key == "remove":
             _change_mode(REMOVE)
-            pkgman.remove(package_list)
+            pkgman.remove(entry[key])
         elif key == "try_remove":
             _change_mode(REMOVE)
-            for package in package_list:
+            for package in entry[key]:
                 try:
                     pkgman.remove([package])
                 except subprocess.CalledProcessError:
-                    warn_text = "WARNING: could not remove package "
+                    warn_text = "Could not remove package "
                     warn_text += package
-                    libcalamares.utils.debug(warn_text)
+                    libcalamares.utils.warning(warn_text)
         elif key == "localInstall":
             _change_mode(INSTALL)
-            pkgman.install(package_list, from_local=True)
+            pkgman.install(entry[key], from_local=True)
 
-        completed_packages += len(package_list)
+        completed_packages += len(entry[key])
         libcalamares.job.setprogress(completed_packages * 1.0 / total_packages)
         libcalamares.utils.debug(pretty_name())
 
@@ -431,7 +442,7 @@ def run():
 
     skip_this = libcalamares.job.configuration.get("skip_if_no_internet", False)
     if skip_this and not libcalamares.globalstorage.value("hasInternet"):
-        libcalamares.utils.debug( "WARNING: packages installation has been skipped: no internet" )
+        libcalamares.utils.warning( "Package installation has been skipped: no internet" )
         return None
 
     update_db = libcalamares.job.configuration.get("update_db", False)
@@ -447,7 +458,7 @@ def run():
     completed_packages = 0
     for op in operations:
         for packagelist in op.values():
-            total_packages += len(subst_locale(packagelist))
+            total_packages += len(packagelist)
 
     if not total_packages:
         # Avoids potential divide-by-zero in progress reporting

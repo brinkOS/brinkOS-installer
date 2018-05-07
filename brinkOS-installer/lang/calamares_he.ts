@@ -105,7 +105,7 @@
 <context>
     <name>Calamares::JobThread</name>
     <message>
-        <location filename="../src/libcalamares/JobQueue.cpp" line="89"/>
+        <location filename="../src/libcalamares/JobQueue.cpp" line="86"/>
         <source>Done</source>
         <translation>בוצע</translation>
     </message>
@@ -121,68 +121,6 @@
         <location filename="../src/libcalamares/ProcessJob.cpp" line="60"/>
         <source>Running command %1 %2</source>
         <translation>מריץ פקודה %1 %2</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="89"/>
-        <source>External command crashed</source>
-        <translation>פקודה חיצונית קרסה</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="90"/>
-        <source>Command %1 crashed.
-Output:
-%2</source>
-        <translation>פקודה %1 קרסה.
-פלט:
-%2</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="95"/>
-        <source>External command failed to start</source>
-        <translation>הרצת פקודה חיצונית כשלה</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="96"/>
-        <source>Command %1 failed to start.</source>
-        <translation>הרצת פקודה %1 כשלה.</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="100"/>
-        <source>Internal error when starting command</source>
-        <translation>שגיאה פנימית בעת התחלת הרצת הפקודה</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="101"/>
-        <source>Bad parameters for process job call.</source>
-        <translation>פרמטרים לא תקינים עבור קריאת עיבוד פעולה.</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="104"/>
-        <source>External command failed to finish</source>
-        <translation>הרצת פקודה חיצונית לא הצליחה להסתיים</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="105"/>
-        <source>Command %1 failed to finish in %2s.
-Output:
-%3</source>
-        <translation>פקודה %1 לא הצליחה להסתיים ב %2 שניות.
-פלט:
-%3</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="111"/>
-        <source>External command finished with errors</source>
-        <translation>פקודה חיצונית הסתיימה עם שגיאות</translation>
-    </message>
-    <message>
-        <location filename="../src/libcalamares/ProcessJob.cpp" line="112"/>
-        <source>Command %1 finished with exit code %2.
-Output:
-%3</source>
-        <translation>פקודה %1 הסתיימה עם קוד יציאה %2.
-פלט:
-%3</translation>
     </message>
 </context>
 <context>
@@ -232,80 +170,80 @@ Output:
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="75"/>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="309"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="279"/>
         <source>&amp;Cancel</source>
         <translation>&amp;בטל</translation>
     </message>
     <message>
         <location filename="../src/libcalamaresui/ViewManager.cpp" line="76"/>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="310"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="280"/>
         <source>Cancel installation without changing the system.</source>
         <translation>בטל התקנה ללא ביצוע שינוי במערכת.</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="99"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="291"/>
         <source>Cancel installation?</source>
         <translation>בטל את ההתקנה?</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="100"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="292"/>
         <source>Do you really want to cancel the current install process?
 The installer will quit and all changes will be lost.</source>
         <translation>האם אתה בטוח שברצונך לבטל את תהליך ההתקנה?
 אשף ההתקנה ייסגר וכל השינויים יאבדו.</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="105"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="297"/>
         <source>&amp;Yes</source>
         <translation>&amp;כן</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="106"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="298"/>
         <source>&amp;No</source>
         <translation>&amp;לא</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="186"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="162"/>
         <source>&amp;Close</source>
         <translation>&amp;סגור</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="238"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="212"/>
         <source>Continue with setup?</source>
         <translation>המשך עם הליך ההתקנה?</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="239"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="213"/>
         <source>The %1 installer is about to make changes to your disk in order to install %2.&lt;br/&gt;&lt;strong&gt;You will not be able to undo these changes.&lt;/strong&gt;</source>
         <translation>אשף ההתקנה של %1 הולך לבצע שינויים בכונן שלך לטובת התקנת %2.&lt;br/&gt;&lt;strong&gt;לא תוכל לבטל את השינויים הללו.&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="244"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="218"/>
         <source>&amp;Install now</source>
         <translation>&amp;התקן כעת</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="245"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="219"/>
         <source>Go &amp;back</source>
         <translation>&amp;אחורה</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="276"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="248"/>
         <source>&amp;Done</source>
         <translation>&amp;בוצע</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="277"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="249"/>
         <source>The installation is complete. Close the installer.</source>
         <translation>תהליך ההתקנה הושלם. אנא סגור את אשף ההתקנה.</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="183"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="159"/>
         <source>Error</source>
         <translation>שגיאה</translation>
     </message>
     <message>
-        <location filename="../src/libcalamaresui/ViewManager.cpp" line="184"/>
+        <location filename="../src/libcalamaresui/ViewManager.cpp" line="160"/>
         <source>Installation Failed</source>
         <translation>ההתקנה נכשלה</translation>
     </message>
@@ -313,22 +251,22 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>CalamaresPython::Helper</name>
     <message>
-        <location filename="../src/libcalamares/PythonHelper.cpp" line="263"/>
+        <location filename="../src/libcalamares/PythonHelper.cpp" line="270"/>
         <source>Unknown exception type</source>
         <translation>טיפוס חריגה אינו מוכר</translation>
     </message>
     <message>
-        <location filename="../src/libcalamares/PythonHelper.cpp" line="276"/>
+        <location filename="../src/libcalamares/PythonHelper.cpp" line="284"/>
         <source>unparseable Python error</source>
         <translation>שגיאת Python לא ניתנת לניתוח</translation>
     </message>
     <message>
-        <location filename="../src/libcalamares/PythonHelper.cpp" line="292"/>
+        <location filename="../src/libcalamares/PythonHelper.cpp" line="324"/>
         <source>unparseable Python traceback</source>
         <translation>עקבה לאחור של Python לא ניתנת לניתוח</translation>
     </message>
     <message>
-        <location filename="../src/libcalamares/PythonHelper.cpp" line="296"/>
+        <location filename="../src/libcalamares/PythonHelper.cpp" line="329"/>
         <source>Unfetchable Python error.</source>
         <translation>שגיאת Python לא ניתנת לאחזור.</translation>
     </message>
@@ -336,27 +274,14 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>CalamaresWindow</name>
     <message>
-        <location filename="../src/calamares/CalamaresWindow.cpp" line="45"/>
+        <location filename="../src/calamares/CalamaresWindow.cpp" line="44"/>
         <source>%1 Installer</source>
         <translation>אשף התקנה של %1</translation>
     </message>
     <message>
-        <location filename="../src/calamares/CalamaresWindow.cpp" line="112"/>
+        <location filename="../src/calamares/CalamaresWindow.cpp" line="111"/>
         <source>Show debug information</source>
         <translation>הצג מידע על ניפוי שגיאות</translation>
-    </message>
-</context>
-<context>
-    <name>CheckFileSystemJob</name>
-    <message>
-        <location filename="../src/modules/partition/jobs/CheckFileSystemJob.cpp" line="39"/>
-        <source>Checking file system on partition %1.</source>
-        <translation>בודק את מערכת הקבצים על מחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CheckFileSystemJob.cpp" line="77"/>
-        <source>The file system check on partition %1 failed.</source>
-        <translation>בדיקת מערכת הקבצים על מחיצה %1 נכשלה.</translation>
     </message>
 </context>
 <context>
@@ -405,12 +330,12 @@ The installer will quit and all changes will be lost.</source>
         <translation>&lt;strong&gt;הגדרת מחיצות באופן ידני&lt;/strong&gt;&lt;br/&gt;תוכל ליצור או לשנות את גודל המחיצות בעצמך.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="972"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="998"/>
         <source>Boot loader location:</source>
         <translation>מיקום מנהל אתחול המערכת:</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="916"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="942"/>
         <source>%1 will be shrunk to %2MB and a new %3MB partition will be created for %4.</source>
         <translation>%1 תוקטן ל %2 MB ומחיצה חדשה בגודל %3 MB תיווצר עבור %4.</translation>
     </message>
@@ -421,83 +346,83 @@ The installer will quit and all changes will be lost.</source>
     </message>
     <message>
         <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="127"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="898"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="944"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1023"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="924"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="970"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1049"/>
         <source>Current:</source>
         <translation>נוכחי:</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="776"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="795"/>
         <source>Reuse %1 as home partition for %2.</source>
         <translation>השתמש ב %1 כמחיצת הבית, home, עבור %2.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="899"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="925"/>
         <source>&lt;strong&gt;Select a partition to shrink, then drag the bottom bar to resize&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;בחר מחיצה לכיווץ, לאחר מכן גרור את הסרגל התחתון בכדי לשנות את גודלה&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1014"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1040"/>
         <source>&lt;strong&gt;Select a partition to install on&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;בחר מחיצה בכדי לבצע את ההתקנה עליה&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1070"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1096"/>
         <source>An EFI system partition cannot be found anywhere on this system. Please go back and use manual partitioning to set up %1.</source>
         <translation>מחיצת מערכת EFI לא נמצאה במערכת. אנא חזור והשתמש ביצירת מחיצות באופן ידני בכדי להגדיר את %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1079"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1105"/>
         <source>The EFI system partition at %1 will be used for starting %2.</source>
         <translation>מחיצת מערכת EFI ב %1 תשמש עבור טעינת %2.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1087"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1113"/>
         <source>EFI system partition:</source>
         <translation>מחיצת מערכת EFI:</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1172"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1200"/>
         <source>This storage device does not seem to have an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>לא נמצאה מערכת הפעלה על התקן אחסון זה. מה ברצונך לעשות?&lt;br/&gt; תוכל לסקור ולאשר את בחירתך לפני ששינויים יתבצעו על התקן האחסון.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1177"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1214"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1236"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1272"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1205"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1242"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1264"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1288"/>
         <source>&lt;strong&gt;Erase disk&lt;/strong&gt;&lt;br/&gt;This will &lt;font color=&quot;red&quot;&gt;delete&lt;/font&gt; all data currently present on the selected storage device.</source>
         <translation>&lt;strong&gt;מחק כונן&lt;/strong&gt;&lt;br/&gt; פעולה זו &lt;font color=&quot;red&quot;&gt;תמחק&lt;/font&gt; את כל המידע השמור על התקן האחסון הנבחר.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1204"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1232"/>
         <source>This storage device has %1 on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>נמצא %1 על התקן אחסון זה. מה ברצונך לעשות?&lt;br/&gt; תוכל לסקור ולאשר את בחירתך לפני ששינויים יתבצעו על התקן האחסון.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1181"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1210"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1232"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1268"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1209"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1238"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1260"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1284"/>
         <source>&lt;strong&gt;Install alongside&lt;/strong&gt;&lt;br/&gt;The installer will shrink a partition to make room for %1.</source>
         <translation>&lt;strong&gt;התקן לצד&lt;/strong&gt;&lt;br/&gt; אשף ההתקנה יכווץ מחיצה בכדי לפנות מקום עבור %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1185"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1219"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1240"/>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1276"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1213"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1247"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1268"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1292"/>
         <source>&lt;strong&gt;Replace a partition&lt;/strong&gt;&lt;br/&gt;Replaces a partition with %1.</source>
         <translation>&lt;strong&gt;החלף מחיצה&lt;/strong&gt;&lt;br/&gt; מבצע החלפה של המחיצה עם %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1227"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1255"/>
         <source>This storage device already has an operating system on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>מערכת הפעלה קיימת על התקן האחסון הזה. מה ברצונך לעשות?&lt;br/&gt; תוכל לסקור ולאשר את בחירתך לפני ששינויים יתבצעו על התקן האחסון.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1263"/>
+        <location filename="../src/modules/partition/gui/ChoicePage.cpp" line="1279"/>
         <source>This storage device has multiple operating systems on it. What would you like to do?&lt;br/&gt;You will be able to review and confirm your choices before any change is made to the storage device.</source>
         <translation>מערכות הפעלה מרובות קיימות על התקן אחסון זה. מה ברצונך לעשות? &lt;br/&gt;תוכל לסקור ולאשר את בחירתך לפני ששינויים יתבצעו על התקן האחסון.</translation>
     </message>
@@ -544,6 +469,27 @@ The installer will quit and all changes will be lost.</source>
     </message>
 </context>
 <context>
+    <name>CommandList</name>
+    <message>
+        <location filename="../src/libcalamares/utils/CommandList.cpp" line="113"/>
+        <source>Could not run command.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CommandList.cpp" line="114"/>
+        <source>No rootMountPoint is defined, so command cannot be run in the target environment.</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>ContextualProcessJob</name>
+    <message>
+        <location filename="../src/modules/contextualprocess/ContextualProcessJob.cpp" line="75"/>
+        <source>Contextual Processes Job</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
     <name>CreatePartitionDialog</name>
     <message>
         <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="14"/>
@@ -576,12 +522,17 @@ The installer will quit and all changes will be lost.</source>
         <translation>מ&amp;ערכת קבצים</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="178"/>
+        <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="151"/>
+        <source>LVM LV name</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="188"/>
         <source>Flags:</source>
         <translation>סימונים:</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="151"/>
+        <location filename="../src/modules/partition/gui/CreatePartitionDialog.ui" line="161"/>
         <source>&amp;Mount Point:</source>
         <translation>נקודת &amp;עיגון:</translation>
     </message>
@@ -591,27 +542,27 @@ The installer will quit and all changes will be lost.</source>
         <translation>גו&amp;דל:</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="66"/>
+        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="68"/>
         <source>En&amp;crypt</source>
         <translation>ה&amp;צפן</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="162"/>
+        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="177"/>
         <source>Logical</source>
         <translation>לוגי</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="167"/>
+        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="182"/>
         <source>Primary</source>
         <translation>ראשי</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="184"/>
+        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="199"/>
         <source>GPT</source>
         <translation>GPT</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="269"/>
+        <location filename="../src/modules/partition/gui/CreatePartitionDialog.cpp" line="288"/>
         <source>Mountpoint already in use. Please select another one.</source>
         <translation>נקודת העיגון בשימוש. אנא בחר נקודת עיגון אחרת.</translation>
     </message>
@@ -619,44 +570,24 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>CreatePartitionJob</name>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="48"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="44"/>
         <source>Create new %2MB partition on %4 (%3) with file system %1.</source>
         <translation>צור מחיצה חדשה בגודל %2 MB על %4 (%3) עם מערכת קבצים %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="59"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="55"/>
         <source>Create new &lt;strong&gt;%2MB&lt;/strong&gt; partition on &lt;strong&gt;%4&lt;/strong&gt; (%3) with file system &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>צור מחיצה חדשה בגודל &lt;strong&gt;%2 MB&lt;/strong&gt; על &lt;strong&gt;%4&lt;/strong&gt; (%3) עם מערכת קבצים &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="71"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="67"/>
         <source>Creating new %1 partition on %2.</source>
         <translation>מגדיר מחיצה %1 חדשה על %2.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="83"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="79"/>
         <source>The installer failed to create partition on disk &apos;%1&apos;.</source>
         <translation>אשף ההתקנה נכשל ביצירת מחיצה על כונן &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="92"/>
-        <source>Could not open device &apos;%1&apos;.</source>
-        <translation>לא ניתן לפתוח את התקן &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="102"/>
-        <source>Could not open partition table.</source>
-        <translation>לא ניתן לפתוח את טבלת המחיצות.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="126"/>
-        <source>The installer failed to create file system on partition %1.</source>
-        <translation>אשף ההתקנה נכשל בעת יצירת מערכת הקבצים על מחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionJob.cpp" line="134"/>
-        <source>The installer failed to update partition table on disk &apos;%1&apos;.</source>
-        <translation>אשף ההתקנה נכשל בעת עדכון טבלת המחיצות על כונן &apos;%1&apos;.</translation>
     </message>
 </context>
 <context>
@@ -690,29 +621,24 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>CreatePartitionTableJob</name>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="49"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="45"/>
         <source>Create new %1 partition table on %2.</source>
         <translation>צור טבלת מחיצות %1 חדשה על %2.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="56"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="52"/>
         <source>Create new &lt;strong&gt;%1&lt;/strong&gt; partition table on &lt;strong&gt;%2&lt;/strong&gt; (%3).</source>
         <translation>צור טבלת מחיצות &lt;strong&gt;%1&lt;/strong&gt; חדשה על &lt;strong&gt;%2&lt;/strong&gt; (%3).</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="66"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="62"/>
         <source>Creating new %1 partition table on %2.</source>
         <translation>יוצר טבלת מחיצות %1 חדשה על %2.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="76"/>
+        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="72"/>
         <source>The installer failed to create a partition table on %1.</source>
         <translation>אשף ההתקנה נכשל בעת יצירת טבלת המחיצות על %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/CreatePartitionTableJob.cpp" line="84"/>
-        <source>Could not open device %1.</source>
-        <translation>לא ניתן לפתוח את התקן %1.</translation>
     </message>
 </context>
 <context>
@@ -753,32 +679,32 @@ The installer will quit and all changes will be lost.</source>
         <translation>לא ניתן לפתוח את קובץ הקבוצות לקריאה.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/CreateUserJob.cpp" line="160"/>
+        <location filename="../src/modules/users/CreateUserJob.cpp" line="159"/>
         <source>Cannot create user %1.</source>
         <translation>לא ניתן ליצור משתמש %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/CreateUserJob.cpp" line="162"/>
+        <location filename="../src/modules/users/CreateUserJob.cpp" line="161"/>
         <source>useradd terminated with error code %1.</source>
         <translation>פקודת יצירת המשתמש, useradd, נכשלה עם קוד יציאה %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/CreateUserJob.cpp" line="171"/>
+        <location filename="../src/modules/users/CreateUserJob.cpp" line="170"/>
         <source>Cannot add user %1 to groups: %2.</source>
         <translation>לא ניתן להוסיף את המשתמש %1 לקבוצות: %2.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/CreateUserJob.cpp" line="174"/>
+        <location filename="../src/modules/users/CreateUserJob.cpp" line="173"/>
         <source>usermod terminated with error code %1.</source>
         <translation>פקודת שינוי מאפייני המשתמש, usermod, נכשלה עם קוד יציאה %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/CreateUserJob.cpp" line="184"/>
+        <location filename="../src/modules/users/CreateUserJob.cpp" line="183"/>
         <source>Cannot set home directory ownership for user %1.</source>
         <translation>לא ניתן להגדיר בעלות על תיקיית הבית עבור משתמש %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/CreateUserJob.cpp" line="186"/>
+        <location filename="../src/modules/users/CreateUserJob.cpp" line="185"/>
         <source>chown terminated with error code %1.</source>
         <translation>פקודת שינוי בעלות, chown, נכשלה עם קוד יציאה %1.</translation>
     </message>
@@ -786,39 +712,24 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>DeletePartitionJob</name>
     <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="42"/>
+        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="40"/>
         <source>Delete partition %1.</source>
         <translation>מחק את מחיצה %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="50"/>
+        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="48"/>
         <source>Delete partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>מחק את מחיצה &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="58"/>
+        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="56"/>
         <source>Deleting partition %1.</source>
         <translation>מבצע מחיקה של מחיצה %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="67"/>
+        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="68"/>
         <source>The installer failed to delete partition %1.</source>
         <translation>אשף ההתקנה נכשל בעת מחיקת מחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="73"/>
-        <source>Partition (%1) and device (%2) do not match.</source>
-        <translation>מחיצה (%1) והתקן (%2) לא תואמים.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="85"/>
-        <source>Could not open device %1.</source>
-        <translation>לא ניתן לפתוח את התקן %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/DeletePartitionJob.cpp" line="94"/>
-        <source>Could not open partition table.</source>
-        <translation>לא ניתן לפתוח את טבלת המחיצות.</translation>
     </message>
 </context>
 <context>
@@ -1020,7 +931,12 @@ The installer will quit and all changes will be lost.</source>
         <translation>Form</translation>
     </message>
     <message>
-        <location filename="../src/modules/finished/FinishedPage.ui" line="77"/>
+        <location filename="../src/modules/finished/FinishedPage.ui" line="95"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When this box is checked, your system will restart immediately when you click on &lt;span style=&quot; font-style:italic;&quot;&gt;Done&lt;/span&gt; or close the installer.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/finished/FinishedPage.ui" line="98"/>
         <source>&amp;Restart now</source>
         <translation>&amp;אתחל כעת</translation>
     </message>
@@ -1038,17 +954,17 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>FinishedViewStep</name>
     <message>
-        <location filename="../src/modules/finished/FinishedViewStep.cpp" line="60"/>
+        <location filename="../src/modules/finished/FinishedViewStep.cpp" line="59"/>
         <source>Finish</source>
         <translation>סיום</translation>
     </message>
     <message>
-        <location filename="../src/modules/finished/FinishedViewStep.cpp" line="126"/>
+        <location filename="../src/modules/finished/FinishedViewStep.cpp" line="124"/>
         <source>Installation Complete</source>
         <translation>ההתקנה הושלמה</translation>
     </message>
     <message>
-        <location filename="../src/modules/finished/FinishedViewStep.cpp" line="127"/>
+        <location filename="../src/modules/finished/FinishedViewStep.cpp" line="125"/>
         <source>The installation of %1 is complete.</source>
         <translation>ההתקנה של %1 הושלמה.</translation>
     </message>
@@ -1056,64 +972,40 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>FormatPartitionJob</name>
     <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="49"/>
+        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="41"/>
         <source>Format partition %1 (file system: %2, size: %3 MB) on %4.</source>
         <translation>אתחל מחיצה %1 (מערכת קבצים: %2, גודל: %3 MB) על %4.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="60"/>
+        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="52"/>
         <source>Format &lt;strong&gt;%3MB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; with file system &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>אתחול מחיצה &lt;strong&gt;%1&lt;/strong&gt; בגודל &lt;strong&gt;%3 MB&lt;/strong&gt; עם מערכת קבצים &lt;strong&gt;%2&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="71"/>
+        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="63"/>
         <source>Formatting partition %1 with file system %2.</source>
         <translation>מאתחל מחיצה %1 עם מערכת קבצים %2.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="83"/>
+        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="77"/>
         <source>The installer failed to format partition %1 on disk &apos;%2&apos;.</source>
         <translation>אשף ההתקנה נכשל בעת אתחול המחיצה %1 על כונן &apos;%2&apos;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="91"/>
-        <source>Could not open device &apos;%1&apos;.</source>
-        <translation>לא ניתן לפתוח את התקן &apos;%1&apos;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="100"/>
-        <source>Could not open partition table.</source>
-        <translation>לא ניתן לפתוח את טבלת המחיצות.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="124"/>
-        <source>The installer failed to create file system on partition %1.</source>
-        <translation>אשף ההתקנה נכשל בעת יצירת מערכת הקבצים על מחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/FormatPartitionJob.cpp" line="133"/>
-        <source>The installer failed to update partition table on disk &apos;%1&apos;.</source>
-        <translation>אשף ההתקנה נכשל בעת עדכון טבלת המחיצות על כונן &apos;%1&apos;.</translation>
     </message>
 </context>
 <context>
     <name>InteractiveTerminalPage</name>
     <message>
-        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="69"/>
-        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="84"/>
-        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="96"/>
+        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="53"/>
         <source>Konsole not installed</source>
         <translation>Konsole לא מותקן.</translation>
     </message>
     <message>
-        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="70"/>
-        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="85"/>
-        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="97"/>
-        <source>Please install the kde konsole and try again!</source>
-        <translation>אנא התקן את kde konsole ונסה שוב!</translation>
+        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="54"/>
+        <source>Please install KDE Konsole and try again!</source>
+        <translation>אנא התקן את KDE Konsole ונסה שוב!</translation>
     </message>
     <message>
-        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="122"/>
+        <location filename="../src/modules/interactiveterminal/InteractiveTerminalPage.cpp" line="116"/>
         <source>Executing script: &amp;nbsp;&lt;code&gt;%1&lt;/code&gt;</source>
         <translation>מריץ תסריט הרצה: &amp;nbsp; &lt;code&gt;%1&lt;/code&gt;</translation>
     </message>
@@ -1129,12 +1021,12 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>KeyboardPage</name>
     <message>
-        <location filename="../src/modules/keyboard/KeyboardPage.cpp" line="208"/>
+        <location filename="../src/modules/keyboard/KeyboardPage.cpp" line="220"/>
         <source>Set keyboard model to %1.&lt;br/&gt;</source>
         <translation>הגדר את דגם המקלדת ל %1.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../src/modules/keyboard/KeyboardPage.cpp" line="210"/>
+        <location filename="../src/modules/keyboard/KeyboardPage.cpp" line="222"/>
         <source>Set keyboard layout to %1/%2.</source>
         <translation>הגדר את פריסת לוח המקשים ל %1/%2.</translation>
     </message>
@@ -1296,84 +1188,283 @@ The installer will quit and all changes will be lost.</source>
         <translation>טוען נתונים על המיקום... </translation>
     </message>
     <message>
-        <location filename="../src/modules/locale/LocaleViewStep.cpp" line="160"/>
+        <location filename="../src/modules/locale/LocaleViewStep.cpp" line="169"/>
         <source>Location</source>
         <translation>מיקום</translation>
     </message>
 </context>
 <context>
-    <name>MoveFileSystemJob</name>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="66"/>
-        <source>Move file system of partition %1.</source>
-        <translation>העבר את מערכת הקבצים של מחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="80"/>
-        <source>Could not open file system on partition %1 for moving.</source>
-        <translation>פתיחת מערכת הקבצים במחיצה %1 לטובת ההעברה נכשלה.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="86"/>
-        <source>Could not create target for moving file system on partition %1.</source>
-        <translation>לא ניתן ליצור יעד עבור העברת מערכת הקבצים במחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="95"/>
-        <source>Moving of partition %1 failed, changes have been rolled back.</source>
-        <translation>העברה של מחיצה %1 נכשלה, מבטל שינויים.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="101"/>
-        <source>Moving of partition %1 failed. Roll back of the changes have failed.</source>
-        <translation>העברה של מחיצה %1 נכשלה, ביטול השינויים נכשל.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="113"/>
-        <source>Updating boot sector after the moving of partition %1 failed.</source>
-        <translation>מעדכן את מקטע האתחול לאחר כשלון העברת מחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="127"/>
-        <source>The logical sector sizes in the source and target for copying are not the same. This is currently unsupported.</source>
-        <translation>הגדלים הלוגיים של מקטעי המקור והיעד להעתקה אינם זהים. הנ&quot;ל לא נתמך בגרסה זו.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="197"/>
-        <source>Source and target for copying do not overlap: Rollback is not required.</source>
-        <translation>המקור והיעד להעתקה לא חופפים: ביטול שינויים לא נדרש.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="221"/>
-        <location filename="../src/modules/partition/jobs/MoveFileSystemJob.cpp" line="229"/>
-        <source>Could not open device %1 to rollback copying.</source>
-        <translation>פתיחת התקן %1 בכדי לבצע העתקה למצב הקודם נכשלה. </translation>
-    </message>
-</context>
-<context>
     <name>NetInstallPage</name>
     <message>
-        <location filename="../src/modules/netinstall/NetInstallPage.cpp" line="73"/>
+        <location filename="../src/modules/netinstall/NetInstallPage.cpp" line="72"/>
         <source>Name</source>
         <translation>שם</translation>
     </message>
     <message>
-        <location filename="../src/modules/netinstall/NetInstallPage.cpp" line="74"/>
+        <location filename="../src/modules/netinstall/NetInstallPage.cpp" line="73"/>
         <source>Description</source>
         <translation>תיאור</translation>
     </message>
     <message>
-        <location filename="../src/modules/netinstall/NetInstallPage.cpp" line="83"/>
+        <location filename="../src/modules/netinstall/NetInstallPage.cpp" line="94"/>
         <source>Network Installation. (Disabled: Unable to fetch package lists, check your network connection)</source>
         <translation>התקנת רשת. (מנוטרלת: לא ניתן לאחזר רשימות של חבילות תוכנה, אנא בדוק את חיבורי הרשת)</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/netinstall/NetInstallPage.cpp" line="104"/>
+        <source>Network Installation. (Disabled: Received invalid groups data)</source>
+        <translation>התקנה מהרשת. (מנוטרל: התקבל מידע שגוי בנושא הקבוצות)</translation>
     </message>
 </context>
 <context>
     <name>NetInstallViewStep</name>
     <message>
-        <location filename="../src/modules/netinstall/NetInstallViewStep.cpp" line="51"/>
+        <location filename="../src/modules/netinstall/NetInstallViewStep.cpp" line="52"/>
         <source>Package selection</source>
         <translation>בחירת חבילות</translation>
+    </message>
+</context>
+<context>
+    <name>PWQ</name>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="67"/>
+        <source>Password is too short</source>
+        <translation>הסיסמה קצרה מדי</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="89"/>
+        <source>Password is too long</source>
+        <translation>הסיסמה ארוכה מדי</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="155"/>
+        <source>Password is too weak</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="162"/>
+        <source>Memory allocation error when setting &apos;%1&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="166"/>
+        <source>Memory allocation error</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="168"/>
+        <source>The password is the same as the old one</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="170"/>
+        <source>The password is a palindrome</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="172"/>
+        <source>The password differs with case changes only</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="174"/>
+        <source>The password is too similar to the old one</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="176"/>
+        <source>The password contains the user name in some form</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="178"/>
+        <source>The password contains words from the real name of the user in some form</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="180"/>
+        <source>The password contains forbidden words in some form</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="183"/>
+        <source>The password contains less than %1 digits</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="184"/>
+        <source>The password contains too few digits</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="187"/>
+        <source>The password contains less than %1 uppercase letters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="188"/>
+        <source>The password contains too few uppercase letters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="191"/>
+        <source>The password contains less than %1 lowercase letters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="192"/>
+        <source>The password contains too few lowercase letters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="195"/>
+        <source>The password contains less than %1 non-alphanumeric characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="196"/>
+        <source>The password contains too few non-alphanumeric characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="199"/>
+        <source>The password is shorter than %1 characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="200"/>
+        <source>The password is too short</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="202"/>
+        <source>The password is just rotated old one</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="205"/>
+        <source>The password contains less than %1 character classes</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="206"/>
+        <source>The password does not contain enough character classes</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="209"/>
+        <source>The password contains more than %1 same characters consecutively</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="210"/>
+        <source>The password contains too many same characters consecutively</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="213"/>
+        <source>The password contains more than %1 characters of the same class consecutively</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="214"/>
+        <source>The password contains too many characters of the same class consecutively</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="217"/>
+        <source>The password contains monotonic sequence longer than %1 characters</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="218"/>
+        <source>The password contains too long of a monotonic character sequence</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="220"/>
+        <source>No password supplied</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="222"/>
+        <source>Cannot obtain random numbers from the RNG device</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="224"/>
+        <source>Password generation failed - required entropy too low for settings</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="229"/>
+        <source>The password fails the dictionary check - %1</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="231"/>
+        <source>The password fails the dictionary check</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="235"/>
+        <source>Unknown setting - %1</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="239"/>
+        <source>Unknown setting</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="243"/>
+        <source>Bad integer value of setting - %1</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="247"/>
+        <source>Bad integer value</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="251"/>
+        <source>Setting %1 is not of integer type</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="255"/>
+        <source>Setting is not of integer type</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="259"/>
+        <source>Setting %1 is not of string type</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="263"/>
+        <source>Setting is not of string type</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="265"/>
+        <source>Opening the configuration file failed</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="267"/>
+        <source>The configuration file is malformed</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="269"/>
+        <source>Fatal failure</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/users/CheckPWQuality.cpp" line="271"/>
+        <source>Unknown error</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1467,42 +1558,42 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>PartitionLabelsView</name>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="191"/>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="193"/>
         <source>Root</source>
         <translation>מערכת הפעלה Root</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="194"/>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="196"/>
         <source>Home</source>
         <translation>בית Home</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="196"/>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="198"/>
         <source>Boot</source>
         <translation>טעינה Boot</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="199"/>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="201"/>
         <source>EFI system</source>
         <translation>מערכת EFI</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="201"/>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="203"/>
         <source>Swap</source>
         <translation>דפדוף, Swap</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="203"/>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="205"/>
         <source>New partition for %1</source>
         <translation>מחיצה חדשה עבור %1</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="205"/>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="207"/>
         <source>New partition</source>
         <translation>מחיצה חדשה</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="222"/>
+        <location filename="../src/modules/partition/gui/PartitionLabelsView.cpp" line="224"/>
         <source>%1  %2</source>
         <translation>%1  %2</translation>
     </message>
@@ -1585,7 +1676,7 @@ The installer will quit and all changes will be lost.</source>
         <translation>התקן &amp;מנהל אתחול מערכת על:</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/PartitionPage.cpp" line="161"/>
+        <location filename="../src/modules/partition/gui/PartitionPage.cpp" line="168"/>
         <source>Are you sure you want to create a new partition table on %1?</source>
         <translation>האם אתה בטוח שברצונך ליצור טבלת מחיצות חדשה על %1?</translation>
     </message>
@@ -1689,6 +1780,112 @@ The installer will quit and all changes will be lost.</source>
     </message>
 </context>
 <context>
+    <name>PlasmaLnfJob</name>
+    <message>
+        <location filename="../src/modules/plasmalnf/PlasmaLnfJob.cpp" line="41"/>
+        <source>Plasma Look-and-Feel Job</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/modules/plasmalnf/PlasmaLnfJob.cpp" line="73"/>
+        <location filename="../src/modules/plasmalnf/PlasmaLnfJob.cpp" line="74"/>
+        <source>Could not select KDE Plasma Look-and-Feel package</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>PlasmaLnfPage</name>
+    <message>
+        <location filename="../src/modules/plasmalnf/page_plasmalnf.ui" line="14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/plasmalnf/page_plasmalnf.ui" line="20"/>
+        <source>Placeholder</source>
+        <translation>שומר מקום</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/plasmalnf/PlasmaLnfPage.cpp" line="64"/>
+        <source>Please choose a look-and-feel for the KDE Plasma Desktop. You can also skip this step and configure the look-and-feel once the system is installed.</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>PlasmaLnfViewStep</name>
+    <message>
+        <location filename="../src/modules/plasmalnf/PlasmaLnfViewStep.cpp" line="51"/>
+        <source>Look-and-Feel</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>ProcessResult</name>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="263"/>
+        <source>
+There was no output from the command.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="264"/>
+        <source>
+Output:
+</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="267"/>
+        <source>External command crashed.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="268"/>
+        <source>Command &lt;i&gt;%1&lt;/i&gt; crashed.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="273"/>
+        <source>External command failed to start.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="274"/>
+        <source>Command &lt;i&gt;%1&lt;/i&gt; failed to start.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="278"/>
+        <source>Internal error when starting command.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="279"/>
+        <source>Bad parameters for process job call.</source>
+        <translation>פרמטרים לא תקינים עבור קריאת עיבוד פעולה.</translation>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="282"/>
+        <source>External command failed to finish.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="283"/>
+        <source>Command &lt;i&gt;%1&lt;/i&gt; failed to finish in %2 seconds.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="289"/>
+        <source>External command finished with errors.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../src/libcalamares/utils/CalamaresUtilsSystem.cpp" line="290"/>
+        <source>Command &lt;i&gt;%1&lt;/i&gt; finished with exit code %2.</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <location filename="../src/modules/keyboard/keyboardwidget/keyboardglobal.cpp" line="82"/>
@@ -1702,22 +1899,22 @@ The installer will quit and all changes will be lost.</source>
         <translation>ברירת מחדל</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/core/KPMHelpers.cpp" line="198"/>
+        <location filename="../src/modules/partition/core/KPMHelpers.cpp" line="204"/>
         <source>unknown</source>
         <translation>לא מוכר/ת</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/core/KPMHelpers.cpp" line="200"/>
+        <location filename="../src/modules/partition/core/KPMHelpers.cpp" line="206"/>
         <source>extended</source>
         <translation>מורחב/ת</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/core/KPMHelpers.cpp" line="202"/>
+        <location filename="../src/modules/partition/core/KPMHelpers.cpp" line="208"/>
         <source>unformatted</source>
         <translation>לא מאותחל/ת</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/core/KPMHelpers.cpp" line="204"/>
+        <location filename="../src/modules/partition/core/KPMHelpers.cpp" line="210"/>
         <source>swap</source>
         <translation>דפדוף, swap</translation>
     </message>
@@ -1805,117 +2002,93 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>RequirementsChecker</name>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="64"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="68"/>
         <source>Gathering system information...</source>
         <translation>מלקט מידע אודות המערכת...</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="108"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="116"/>
         <source>has at least %1 GB available drive space</source>
         <translation>קיים לפחות %1 GB של נפח אחסון</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="110"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="118"/>
         <source>There is not enough drive space. At least %1 GB is required.</source>
         <translation>נפח האחסון לא מספק. נדרש לפחות %1 GB.</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="118"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="126"/>
         <source>has at least %1 GB working memory</source>
         <translation>קיים לפחות %1 GB של זכרון פעולה</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="120"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="128"/>
         <source>The system does not have enough working memory. At least %1 GB is required.</source>
         <translation>כמות הזכרון הנדרשת לפעולה, לא מספיקה. נדרש לפחות %1 GB.</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="128"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="136"/>
         <source>is plugged in to a power source</source>
         <translation>מחובר לספק חשמל חיצוני</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="129"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="137"/>
         <source>The system is not plugged in to a power source.</source>
         <translation>המערכת לא מחוברת לספק חשמל חיצוני.</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="136"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="144"/>
         <source>is connected to the Internet</source>
         <translation>מחובר לאינטרנט</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="137"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="145"/>
         <source>The system is not connected to the Internet.</source>
         <translation>המערכת לא מחוברת לאינטרנט.</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="145"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="153"/>
         <source>The installer is not running with administrator rights.</source>
         <translation>אשף ההתקנה לא רץ עם הרשאות מנהל.</translation>
     </message>
     <message>
-        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="153"/>
+        <location filename="../src/modules/welcome/checker/RequirementsChecker.cpp" line="161"/>
         <source>The screen is too small to display the installer.</source>
         <translation>גודל המסך קטן מדי בכדי להציג את מנהל ההתקנה.</translation>
     </message>
 </context>
 <context>
-    <name>ResizeFileSystemJob</name>
-    <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="76"/>
-        <source>Resize file system on partition %1.</source>
-        <translation>שנה את גודל מערכת הקבצים במחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="91"/>
-        <source>Parted failed to resize filesystem.</source>
-        <translation>Parted נכשלה לשנות את גודל מערכת הקבצים.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="101"/>
-        <source>Failed to resize filesystem.</source>
-        <translation>שינוי גודל מערכת הקבצים נכשלה.</translation>
-    </message>
-</context>
-<context>
     <name>ResizePartitionJob</name>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="187"/>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="48"/>
         <source>Resize partition %1.</source>
         <translation>שנה גודל מחיצה %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="194"/>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="55"/>
         <source>Resize &lt;strong&gt;%2MB&lt;/strong&gt; partition &lt;strong&gt;%1&lt;/strong&gt; to &lt;strong&gt;%3MB&lt;/strong&gt;.</source>
         <translation>משנה את מחיצה &lt;strong&gt;%1&lt;/strong&gt; מגודל &lt;strong&gt;%2 MB&lt;/strong&gt; ל &lt;strong&gt;%3 MB&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="205"/>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="66"/>
         <source>Resizing %2MB partition %1 to %3MB.</source>
         <translation>משנה את מחיצה %1 מ %2 MB ל %3 MB.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="232"/>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="298"/>
+        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="85"/>
         <source>The installer failed to resize partition %1 on disk &apos;%2&apos;.</source>
         <translation>תהליך ההתקנה נכשל בשינוי גודל המחיצה %1 על כונן &apos;%2&apos;.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="237"/>
-        <source>Could not open device &apos;%1&apos;.</source>
-        <translation>נכשלה פתיחת התקן &apos;%1&apos;.</translation>
     </message>
 </context>
 <context>
     <name>ScanningDialog</name>
     <message>
-        <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="83"/>
+        <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="84"/>
         <source>Scanning storage devices...</source>
         <translation>סורק התקני זכרון...</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="84"/>
+        <location filename="../src/modules/partition/gui/ScanningDialog.cpp" line="85"/>
         <source>Partitioning</source>
         <translation>מגדיר מחיצות</translation>
     </message>
@@ -1958,24 +2131,24 @@ The installer will quit and all changes will be lost.</source>
         <translation>הגדר דגם מקלדת ל %1, פריסת לוח מקשים ל %2-%3</translation>
     </message>
     <message>
-        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="320"/>
+        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="318"/>
         <source>Failed to write keyboard configuration for the virtual console.</source>
         <translation>נכשלה כתיבת הגדרת מקלדת למסוף הוירטואלי.</translation>
     </message>
     <message>
-        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="321"/>
-        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="325"/>
-        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="331"/>
+        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="319"/>
+        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="323"/>
+        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="329"/>
         <source>Failed to write to %1</source>
         <translation>נכשלה כתיבה ל %1</translation>
     </message>
     <message>
-        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="324"/>
+        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="322"/>
         <source>Failed to write keyboard configuration for X11.</source>
         <translation>נכשלה כתיבת הגדרת מקלדת עבור X11.</translation>
     </message>
     <message>
-        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="330"/>
+        <location filename="../src/modules/keyboard/SetKeyboardLayoutJob.cpp" line="328"/>
         <source>Failed to write keyboard configuration to existing /etc/default directory.</source>
         <translation>נכשלה כתיבת הגדרת מקלדת לתיקיה קיימת /etc/default.</translation>
     </message>
@@ -1983,77 +2156,77 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>SetPartFlagsJob</name>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="48"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="49"/>
         <source>Set flags on partition %1.</source>
         <translation>הגדר סימונים על מחיצה %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="51"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="52"/>
         <source>Set flags on %1MB %2 partition.</source>
         <translation>הגדר סימונים על מחיצה %2 בגודל %1 MB.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="55"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="56"/>
         <source>Set flags on new partition.</source>
         <translation>הגדר סימונים על מחיצה חדשה.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="66"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="67"/>
         <source>Clear flags on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>מחק סימונים על מחיצה &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="70"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="71"/>
         <source>Clear flags on %1MB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
         <translation>מחק סימונים על מחיצה &lt;strong&gt;%2&lt;/strong&gt; בגודל %1 MB.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="74"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="75"/>
         <source>Clear flags on new partition.</source>
         <translation>מחק סימונים על המחיצה החדשה.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="78"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="79"/>
         <source>Flag partition &lt;strong&gt;%1&lt;/strong&gt; as &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>סמן מחיצה &lt;strong&gt;%1&lt;/strong&gt; כ &lt;strong&gt;%2&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="84"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="85"/>
         <source>Flag %1MB &lt;strong&gt;%2&lt;/strong&gt; partition as &lt;strong&gt;%3&lt;/strong&gt;.</source>
         <translation>סמן מחיצה &lt;strong&gt;%2&lt;/strong&gt; בגודל %1 MB כ &lt;strong&gt;%3&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="90"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="91"/>
         <source>Flag new partition as &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>סמן מחיצה חדשה כ &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="102"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="103"/>
         <source>Clearing flags on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>מוחק סימונים על מחיצה &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="106"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="107"/>
         <source>Clearing flags on %1MB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
         <translation>מוחק סימונים על מחיצה &lt;strong&gt;%2&lt;/strong&gt; בגודל %1 MB.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="110"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="111"/>
         <source>Clearing flags on new partition.</source>
         <translation>מוחק סימונים על מחיצה חדשה.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="114"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="115"/>
         <source>Setting flags &lt;strong&gt;%2&lt;/strong&gt; on partition &lt;strong&gt;%1&lt;/strong&gt;.</source>
         <translation>מגדיר סימונים &lt;strong&gt;%2&lt;/strong&gt; על מחיצה &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="120"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="121"/>
         <source>Setting flags &lt;strong&gt;%3&lt;/strong&gt; on %1MB &lt;strong&gt;%2&lt;/strong&gt; partition.</source>
         <translation>מגדיר סימונים &lt;strong&gt;%3&lt;/strong&gt; על מחיצה &lt;strong&gt;%2&lt;/strong&gt; בגודל %1 MB.</translation>
     </message>
     <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="126"/>
+        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="127"/>
         <source>Setting flags &lt;strong&gt;%1&lt;/strong&gt; on new partition.</source>
         <translation>מגדיר סימונים &lt;strong&gt;%1&lt;/strong&gt; על מחיצה חדשה.</translation>
     </message>
@@ -2062,74 +2235,46 @@ The installer will quit and all changes will be lost.</source>
         <source>The installer failed to set flags on partition %1.</source>
         <translation>תהליך ההתקנה נכשל בעת הצבת סימונים במחיצה %1.</translation>
     </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="148"/>
-        <source>Could not open device &apos;%1&apos;.</source>
-        <translation>פתיחת כונן &apos;%1&apos; נכשלה.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="157"/>
-        <source>Could not open partition table on device &apos;%1&apos;.</source>
-        <translation>פתיחת טבלת מחיצות על כונן &apos;%1&apos; נכשלה.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="169"/>
-        <source>Could not find partition &apos;%1&apos;.</source>
-        <translation>לא נמצאה מחיצה &apos;%1&apos;.</translation>
-    </message>
-</context>
-<context>
-    <name>SetPartGeometryJob</name>
-    <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="144"/>
-        <source>Update geometry of partition %1.</source>
-        <translation>עדכן גאומטריית מחיצה %1.</translation>
-    </message>
-    <message>
-        <location filename="../src/modules/partition/jobs/ResizePartitionJob.cpp" line="156"/>
-        <source>Failed to change the geometry of the partition.</source>
-        <translation>נכשל שינוי גאומטריית המחיצה.</translation>
-    </message>
 </context>
 <context>
     <name>SetPasswordJob</name>
     <message>
-        <location filename="../src/modules/users/SetPasswordJob.cpp" line="44"/>
+        <location filename="../src/modules/users/SetPasswordJob.cpp" line="48"/>
         <source>Set password for user %1</source>
         <translation>הגדר סיסמה עבור משתמש %1</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/SetPasswordJob.cpp" line="51"/>
+        <location filename="../src/modules/users/SetPasswordJob.cpp" line="55"/>
         <source>Setting password for user %1.</source>
         <translation>מגדיר סיסמה עבור משתמש %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/SetPasswordJob.cpp" line="108"/>
+        <location filename="../src/modules/users/SetPasswordJob.cpp" line="112"/>
         <source>Bad destination system path.</source>
         <translation>יעד נתיב המערכת לא תקין.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/SetPasswordJob.cpp" line="109"/>
+        <location filename="../src/modules/users/SetPasswordJob.cpp" line="113"/>
         <source>rootMountPoint is %1</source>
         <translation>עיגון מחיצת מערכת ההפעלה, rootMountPoint, היא %1</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/SetPasswordJob.cpp" line="119"/>
+        <location filename="../src/modules/users/SetPasswordJob.cpp" line="123"/>
         <source>Cannot disable root account.</source>
         <translation>לא ניתן לנטרל את חשבון המנהל root.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/SetPasswordJob.cpp" line="120"/>
+        <location filename="../src/modules/users/SetPasswordJob.cpp" line="124"/>
         <source>passwd terminated with error code %1.</source>
         <translation>passwd הסתיימה עם שגיאת קוד %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/SetPasswordJob.cpp" line="135"/>
+        <location filename="../src/modules/users/SetPasswordJob.cpp" line="139"/>
         <source>Cannot set password for user %1.</source>
         <translation>לא ניתן להגדיר סיסמה עבור משתמש %1.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/SetPasswordJob.cpp" line="137"/>
+        <location filename="../src/modules/users/SetPasswordJob.cpp" line="141"/>
         <source>usermod terminated with error code %1.</source>
         <translation>פקודת שינוי מאפייני המשתמש, usermod, נכשלה עם קוד יציאה %1.</translation>
     </message>
@@ -2173,9 +2318,17 @@ The installer will quit and all changes will be lost.</source>
     </message>
 </context>
 <context>
+    <name>ShellProcessJob</name>
+    <message>
+        <location filename="../src/modules/shellprocess/ShellProcessJob.cpp" line="51"/>
+        <source>Shell Processes Job</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
     <name>SummaryPage</name>
     <message>
-        <location filename="../src/modules/summary/SummaryPage.cpp" line="46"/>
+        <location filename="../src/modules/summary/SummaryPage.cpp" line="49"/>
         <source>This is an overview of what will happen once you start the install procedure.</source>
         <translation>להלן סקירת המאורעות שיתרחשו עם תחילת תהליך ההתקנה.</translation>
     </message>
@@ -2189,35 +2342,152 @@ The installer will quit and all changes will be lost.</source>
     </message>
 </context>
 <context>
+    <name>TrackingInstallJob</name>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="43"/>
+        <source>Installation feedback</source>
+        <translation>משוב בנושא ההתקנה</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="53"/>
+        <source>Sending installation feedback.</source>
+        <translation>שולח משוב בנושא ההתקנה.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="88"/>
+        <source>Internal error in install-tracking.</source>
+        <translation>שגיאה פנימית בעת התקנת תכונת המעקב.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="89"/>
+        <source>HTTP request timed out.</source>
+        <translation>בקשת HTTP חרגה מזמן ההמתנה המקסימאלי.</translation>
+    </message>
+</context>
+<context>
+    <name>TrackingMachineNeonJob</name>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="104"/>
+        <source>Machine feedback</source>
+        <translation>משוב בנושא עמדת המחשב</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="114"/>
+        <source>Configuring machine feedback.</source>
+        <translation>מגדיר משוב בנושא עמדת המחשב.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="133"/>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="136"/>
+        <source>Error in machine feedback configuration.</source>
+        <translation>שגיאה בעת הגדרת המשוב בנושא עמדת המחשב.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="134"/>
+        <source>Could not configure machine feedback correctly, script error %1.</source>
+        <translation>לא ניתן להגדיר את המשוב בנושא עמדת המחשב באופן תקין. שגיאת הרצה %1.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingJobs.cpp" line="137"/>
+        <source>Could not configure machine feedback correctly, Calamares error %1.</source>
+        <translation>לא ניתן להגדיר את המשוב בנושא עמדת המחשב באופן תקין. שגיאת Calamares %1.</translation>
+    </message>
+</context>
+<context>
+    <name>TrackingPage</name>
+    <message>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="14"/>
+        <source>Form</source>
+        <translation>Form</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="24"/>
+        <source>Placeholder</source>
+        <translation>שומר מקום</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="72"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By selecting this, you will send &lt;span style=&quot; font-weight:600;&quot;&gt;no information at all&lt;/span&gt; about your installation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;על ידי בחירת אפשרות זו, &lt;span style=&quot; font-weight:600;&quot;&gt;לא תשלח מידע כלל &lt;/span&gt;בנושא ההתקנה שלך.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="123"/>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="185"/>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="247"/>
+        <source>TextLabel</source>
+        <translation>תָּוִית טקסט</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="133"/>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="195"/>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="257"/>
+        <source>...</source>
+        <translation>...</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/page_trackingstep.ui" line="271"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;placeholder&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;Click here for more information about user feedback&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;placeholder&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;לחץ כאן למידע נוסף אודות משוב מצד המשתמש&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingPage.cpp" line="44"/>
+        <source>Install tracking helps %1 to see how many users they have, what hardware they install %1 to and (with the last two options below), get continuous information about preferred applications. To see what will be sent, please click the help icon next to each area.</source>
+        <translation>התקנת תכונת המעקב מסייעת ל %1 לראות את כמות המשתמשים, החומרה שעליה הם מתקינים את %1 ו(באמצעות שתי האפשרויות מטה), לקבל מידע מתמשך אודות תוכנות נבחרות. בכדי לראות את המידע שיישלח, אנא לחץ על צַלְמִית העזרה לצד כל תחום.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingPage.cpp" line="45"/>
+        <source>By selecting this you will send information about your installation and hardware. This information will &lt;b&gt;only be sent once&lt;/b&gt; after the installation finishes.</source>
+        <translation>על ידי בחירת אפשרות זו יישלח מידע אודות ההתקנה והחומרה שלך. מידע זה &lt;b&gt;יישלח פעם אחת בלבד&lt;/b&gt; לאחר תום הליך ההתקנה.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingPage.cpp" line="46"/>
+        <source>By selecting this you will &lt;b&gt;periodically&lt;/b&gt; send information about your installation, hardware and applications, to %1.</source>
+        <translation>על ידי בחירת אפשרות זו יישלח &lt;b&gt;באופן קבוע&lt;/b&gt; מידע אודות ההתקנה, החומרה והתוכנות שלך, ל %1.</translation>
+    </message>
+    <message>
+        <location filename="../src/modules/tracking/TrackingPage.cpp" line="47"/>
+        <source>By selecting this you will &lt;b&gt;regularly&lt;/b&gt; send information about your installation, hardware, applications and usage patterns, to %1.</source>
+        <translation>על ידי בחירת אפשרות זו יישלח &lt;b&gt;באופן קבוע&lt;/b&gt; מידע אודות ההתקנה, החומרה, התוכנות ודפוסי השימוש שלך, ל %1.</translation>
+    </message>
+</context>
+<context>
+    <name>TrackingViewStep</name>
+    <message>
+        <location filename="../src/modules/tracking/TrackingViewStep.cpp" line="59"/>
+        <source>Feedback</source>
+        <translation>משוב</translation>
+    </message>
+</context>
+<context>
     <name>UsersPage</name>
     <message>
-        <location filename="../src/modules/users/UsersPage.cpp" line="275"/>
+        <location filename="../src/modules/users/UsersPage.cpp" line="289"/>
         <source>Your username is too long.</source>
         <translation>שם המשתמש ארוך מדי.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/UsersPage.cpp" line="285"/>
+        <location filename="../src/modules/users/UsersPage.cpp" line="295"/>
         <source>Your username contains invalid characters. Only lowercase letters and numbers are allowed.</source>
         <translation>שם העמדה מכיל ערכים לא תקינים. ניתן להשתמש אך ורק באותיות קטנות ומספרים.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/UsersPage.cpp" line="329"/>
+        <location filename="../src/modules/users/UsersPage.cpp" line="333"/>
         <source>Your hostname is too short.</source>
         <translation>שם העמדה קצר מדי.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/UsersPage.cpp" line="340"/>
+        <location filename="../src/modules/users/UsersPage.cpp" line="339"/>
         <source>Your hostname is too long.</source>
         <translation>שם העמדה ארוך מדי.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/UsersPage.cpp" line="351"/>
+        <location filename="../src/modules/users/UsersPage.cpp" line="345"/>
         <source>Your hostname contains invalid characters. Only letters, numbers and dashes are allowed.</source>
         <translation>שם העמדה מכיל ערכים לא תקינים. אך ורק אותיות, מספרים ומקפים מורשים.</translation>
     </message>
     <message>
-        <location filename="../src/modules/users/UsersPage.cpp" line="382"/>
-        <location filename="../src/modules/users/UsersPage.cpp" line="415"/>
+        <location filename="../src/modules/users/UsersPage.cpp" line="373"/>
+        <location filename="../src/modules/users/UsersPage.cpp" line="417"/>
         <source>Your passwords do not match!</source>
         <translation>הסיסמאות לא תואמות!</translation>
     </message>
@@ -2225,7 +2495,7 @@ The installer will quit and all changes will be lost.</source>
 <context>
     <name>UsersViewStep</name>
     <message>
-        <location filename="../src/modules/users/UsersViewStep.cpp" line="48"/>
+        <location filename="../src/modules/users/UsersViewStep.cpp" line="51"/>
         <source>Users</source>
         <translation>משתמשים</translation>
     </message>
@@ -2279,8 +2549,8 @@ The installer will quit and all changes will be lost.</source>
     </message>
     <message>
         <location filename="../src/modules/welcome/WelcomePage.cpp" line="75"/>
-        <source>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;&lt;strong&gt;%2&lt;br/&gt;for %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;Copyright 2014-2017 Teo Mrnjavac &amp;lt;teo@kde.org&amp;gt;&lt;br/&gt;Copyright 2017 Adriaan de Groot &amp;lt;groot@kde.org&amp;gt;&lt;br/&gt;Thanks to: Anke Boersma, Aurélien Gâteau, Kevin Kofler, Lisa Vitolo, Philip Müller, Pier Luigi Fiorini, Rohan Garg and the &lt;a href=&quot;https://www.transifex.com/calamares/calamares/&quot;&gt;Calamares translators team&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;&lt;a href=&quot;http://calamares.io/&quot;&gt;Calamares&lt;/a&gt; development is sponsored by &lt;br/&gt;&lt;a href=&quot;http://www.blue-systems.com/&quot;&gt;Blue Systems&lt;/a&gt; - Liberating Software.</source>
-        <translation>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;&lt;strong&gt;%2&lt;br/&gt;עבור %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;זכויות יוצרים 2014-2017 Teo Mrnjavac &amp;lt;teo@kde.org&amp;gt;&lt;br/&gt;זכויות יוצרים 2017 Adriaan de Groot &amp;lt;groot@kde.org&amp;gt;&lt;br/&gt;תודות ל: Anke Boersma, Aurélien Gâteau, Kevin Kofler, Lisa Vitolo, Philip Müller, Pier Luigi Fiorini, Rohan Garg ול&lt;a href=&quot;https://www.transifex.com/calamares/calamares/&quot;&gt;צוות התרגום של Calamares&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;פיתוח &lt;a href=&quot;http://calamares.io/&quot;&gt;Calamares&lt;/a&gt; בחסות &lt;br/&gt;&lt;a href=&quot;http://www.blue-systems.com/&quot;&gt;Blue Systems&lt;/a&gt; - משחררים תוכנה.</translation>
+        <source>&lt;h1&gt;%1&lt;/h1&gt;&lt;br/&gt;&lt;strong&gt;%2&lt;br/&gt;for %3&lt;/strong&gt;&lt;br/&gt;&lt;br/&gt;Copyright 2014-2017 Teo Mrnjavac &amp;lt;teo@kde.org&amp;gt;&lt;br/&gt;Copyright 2017 Adriaan de Groot &amp;lt;groot@kde.org&amp;gt;&lt;br/&gt;Thanks to: Anke Boersma, Aurélien Gâteau, Kevin Kofler, Lisa Vitolo, Philip Müller, Pier Luigi Fiorini, Rohan Garg and the &lt;a href=&quot;https://www.transifex.com/calamares/calamares/&quot;&gt;Calamares translators team&lt;/a&gt;.&lt;br/&gt;&lt;br/&gt;&lt;a href=&quot;https://calamares.io/&quot;&gt;Calamares&lt;/a&gt; development is sponsored by &lt;br/&gt;&lt;a href=&quot;http://www.blue-systems.com/&quot;&gt;Blue Systems&lt;/a&gt; - Liberating Software.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../src/modules/welcome/WelcomePage.cpp" line="201"/>

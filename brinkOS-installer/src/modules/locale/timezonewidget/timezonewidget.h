@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014, Teo Mrnjavac <teo@kde.org>
  *
@@ -48,7 +48,7 @@ class TimeZoneWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit TimeZoneWidget( QWidget* parent = 0 );
+    explicit TimeZoneWidget( QWidget* parent = nullptr );
 
     LocaleGlobal::Location getCurrentLocation()
     {

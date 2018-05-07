@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014,      Aurélien Gâteau <agateau@kde.org>
  *   Copyright 2015-2016, Teo Mrnjavac <teo@kde.org>
@@ -29,6 +29,8 @@
 #include <kpmcore/backend/corebackendmanager.h>
 #include <kpmcore/fs/luks.h>
 
+#include "utils/Logger.h"
+
 #include <QDebug>
 
 
@@ -46,7 +48,7 @@ initKPMcore()
     QByteArray backendName = qgetenv( "KPMCORE_BACKEND" );
     if ( !CoreBackendManager::self()->load( backendName.isEmpty() ? CoreBackendManager::defaultBackendName() : backendName ) )
     {
-        qWarning() << "Failed to load backend plugin" << backendName;
+        cWarning() << "Failed to load backend plugin" << backendName;
         return false;
     }
     s_KPMcoreInited = true;
@@ -116,9 +118,7 @@ createNewPartition( PartitionNode* parent,
                     PartitionTable::Flags flags )
 {
     FileSystem* fs = FileSystemFactory::create( fsType, firstSector, lastSector
-#ifdef WITH_KPMCORE22
                                                 ,device.logicalSize()
-#endif
     );
     return new Partition(
                parent,
@@ -153,13 +153,11 @@ createNewEncryptedPartition( PartitionNode* parent,
                            FileSystemFactory::create( FileSystem::Luks,
                                                       firstSector,
                                                       lastSector
-#ifdef WITH_KPMCORE22
                                                      ,device.logicalSize()
-#endif
                                                       ) );
     if ( !fs )
     {
-        qDebug() << "ERROR: cannot create LUKS filesystem. Giving up.";
+        cError() << "cannot create LUKS filesystem. Giving up.";
         return nullptr;
     }
 
@@ -186,9 +184,7 @@ clonePartition( Device* device, Partition* partition )
                          partition->fileSystem().type(),
                          partition->firstSector(),
                          partition->lastSector()
-#ifdef WITH_KPMCORE22
                         ,device->logicalSize()
-#endif
                      );
     return new Partition( partition->parent(),
                           *device,

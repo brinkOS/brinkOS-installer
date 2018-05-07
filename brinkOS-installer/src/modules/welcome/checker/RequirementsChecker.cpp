@@ -1,7 +1,8 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014-2017, Teo Mrnjavac <teo@kde.org>
  *   Copyright 2017, Adriaan de Groot <groot@kde.org>
+ *   Copyright 2017, Gabriel Craciunescu <crazy@frugalware.org>
  *
  *   Calamares is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
@@ -78,7 +79,7 @@ RequirementsChecker::RequirementsChecker( QObject* parent )
         bool hasPower = false;
         bool hasInternet = false;
         bool isRoot = false;
-        bool enoughScreen = (availableSize.width() >= CalamaresUtils::windowPreferredWidth) && (availableSize.height() >= CalamaresUtils::windowPreferredHeight);
+        bool enoughScreen = (availableSize.width() >= CalamaresUtils::windowMinimumWidth) && (availableSize.height() >= CalamaresUtils::windowMinimumHeight);
 
         qint64 requiredStorageB = CalamaresUtils::GiBtoBytes(m_requiredStorageGB);
         cDebug() << "Need at least storage bytes:" << requiredStorageB;
@@ -99,8 +100,12 @@ RequirementsChecker::RequirementsChecker( QObject* parent )
         if ( m_entriesToCheck.contains( "root" ) )
             isRoot = checkIsRoot();
 
-        cDebug() << "enoughStorage, enoughRam, hasPower, hasInternet, isRoot: "
-                 << enoughStorage << enoughRam << hasPower << hasInternet << isRoot;
+        cDebug() << "RequirementsChecker output:"
+                 << " enoughStorage:" << enoughStorage
+                 << " enoughRam:" << enoughRam
+                 << " hasPower:" << hasPower
+                 << " hasInternet:" << hasInternet
+                 << " isRoot:" << isRoot;
 
         QList< PrepareEntry > checkEntries;
         foreach ( const QString& entry, m_entriesToCheck )
@@ -206,6 +211,36 @@ void
 RequirementsChecker::setConfigurationMap( const QVariantMap& configurationMap )
 {
     bool incompleteConfiguration = false;
+
+    if ( configurationMap.contains( "check" ) &&
+         configurationMap.value( "check" ).type() == QVariant::List )
+    {
+        m_entriesToCheck.clear();
+        m_entriesToCheck.append( configurationMap.value( "check" ).toStringList() );
+    }
+    else
+    {
+        cWarning() << "RequirementsChecker entry 'check' is incomplete.";
+        incompleteConfiguration = true;
+    }
+
+    if ( configurationMap.contains( "required" ) &&
+         configurationMap.value( "required" ).type() == QVariant::List )
+    {
+        m_entriesToRequire.clear();
+        m_entriesToRequire.append( configurationMap.value( "required" ).toStringList() );
+    }
+    else
+    {
+        cWarning() << "RequirementsChecker entry 'required' is incomplete.";
+        incompleteConfiguration = true;
+    }
+
+    // Help out with consistency, but don't fix
+    for ( const auto& r : m_entriesToRequire )
+        if ( !m_entriesToCheck.contains( r ) )
+            cWarning() << "RequirementsChecker requires" << r << "but does not check it.";
+
     if ( configurationMap.contains( "requiredStorage" ) &&
          ( configurationMap.value( "requiredStorage" ).type() == QVariant::Double ||
            configurationMap.value( "requiredStorage" ).type() == QVariant::Int ) )
@@ -214,7 +249,7 @@ RequirementsChecker::setConfigurationMap( const QVariantMap& configurationMap )
         m_requiredStorageGB = configurationMap.value( "requiredStorage" ).toDouble( &ok );
         if ( !ok )
         {
-            cDebug() << "WARNING: RequirementsChecker entry 'requiredStorage' is invalid.";
+            cWarning() << "RequirementsChecker entry 'requiredStorage' is invalid.";
             m_requiredStorageGB = 3.;
         }
 
@@ -222,7 +257,7 @@ RequirementsChecker::setConfigurationMap( const QVariantMap& configurationMap )
     }
     else
     {
-        cDebug() << "WARNING: RequirementsChecker entry 'requiredStorage' is missing.";
+        cWarning() << "RequirementsChecker entry 'requiredStorage' is missing.";
         m_requiredStorageGB = 3.;
         incompleteConfiguration = true;
     }
@@ -235,14 +270,14 @@ RequirementsChecker::setConfigurationMap( const QVariantMap& configurationMap )
         m_requiredRamGB = configurationMap.value( "requiredRam" ).toDouble( &ok );
         if ( !ok )
         {
-            cDebug() << "WARNING: RequirementsChecker entry 'requiredRam' is invalid.";
+            cWarning() << "RequirementsChecker entry 'requiredRam' is invalid.";
             m_requiredRamGB = 1.;
             incompleteConfiguration = true;
         }
     }
     else
     {
-        cDebug() << "WARNING: RequirementsChecker entry 'requiredRam' is missing.";
+        cWarning() << "RequirementsChecker entry 'requiredRam' is missing.";
         m_requiredRamGB = 1.;
         incompleteConfiguration = true;
     }
@@ -254,7 +289,7 @@ RequirementsChecker::setConfigurationMap( const QVariantMap& configurationMap )
         if ( m_checkHasInternetUrl.isEmpty() ||
              !QUrl( m_checkHasInternetUrl ).isValid() )
         {
-            cDebug() << "WARNING: RequirementsChecker entry 'internetCheckUrl' is invalid in welcome.conf" << m_checkHasInternetUrl
+            cWarning() << "RequirementsChecker entry 'internetCheckUrl' is invalid in welcome.conf" << m_checkHasInternetUrl
                      << "reverting to default (http://example.com).";
             m_checkHasInternetUrl = "http://example.com";
             incompleteConfiguration = true;
@@ -262,39 +297,15 @@ RequirementsChecker::setConfigurationMap( const QVariantMap& configurationMap )
     }
     else
     {
-        cDebug() << "WARNING: RequirementsChecker entry 'internetCheckUrl' is undefined in welcome.conf,"
+        cWarning() << "RequirementsChecker entry 'internetCheckUrl' is undefined in welcome.conf,"
                     "reverting to default (http://example.com).";
 
         m_checkHasInternetUrl = "http://example.com";
         incompleteConfiguration = true;
     }
 
-    if ( configurationMap.contains( "check" ) &&
-         configurationMap.value( "check" ).type() == QVariant::List )
-    {
-        m_entriesToCheck.clear();
-        m_entriesToCheck.append( configurationMap.value( "check" ).toStringList() );
-    }
-    else
-    {
-        cDebug() << "WARNING: RequirementsChecker entry 'check' is incomplete.";
-        incompleteConfiguration = true;
-    }
-
-    if ( configurationMap.contains( "required" ) &&
-         configurationMap.value( "required" ).type() == QVariant::List )
-    {
-        m_entriesToRequire.clear();
-        m_entriesToRequire.append( configurationMap.value( "required" ).toStringList() );
-    }
-    else
-    {
-        cDebug() << "WARNING: RequirementsChecker entry 'required' is incomplete.";
-        incompleteConfiguration = true;
-    }
-
     if ( incompleteConfiguration )
-        cDebug() << "WARNING: RequirementsChecker configuration map:\n" << configurationMap;
+        cWarning() << "RequirementsChecker configuration map:\n" << configurationMap;
 }
 
 
@@ -308,7 +319,13 @@ RequirementsChecker::verdict() const
 bool
 RequirementsChecker::checkEnoughStorage( qint64 requiredSpace )
 {
+#ifdef WITHOUT_LIBPARTED
+    Q_UNUSED( requiredSpace );
+    cWarning() << "RequirementsChecker is configured without libparted.";
+    return false;
+#else
     return check_big_enough( requiredSpace );
+#endif
 }
 
 

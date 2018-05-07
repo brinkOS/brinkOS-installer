@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2015-2016, Teo Mrnjavac <teo@kde.org>
  *
@@ -281,11 +281,11 @@ runOsprober( PartitionCoreModule* core )
     osprober.start();
     if ( !osprober.waitForStarted() )
     {
-        cDebug() << "ERROR: os-prober cannot start.";
+        cError() << "os-prober cannot start.";
     }
     else if ( !osprober.waitForFinished( 60000 ) )
     {
-        cDebug() << "ERROR: os-prober timed out.";
+        cError() << "os-prober timed out.";
     }
     else
     {
@@ -338,6 +338,28 @@ bool
 isEfiSystem()
 {
     return QDir( "/sys/firmware/efi/efivars" ).exists();
+}
+
+bool
+isEfiBootable( const Partition* candidate )
+{
+    /* If bit 17 is set, old-style Esp flag, it's OK */
+    if ( candidate->activeFlags().testFlag( PartitionTable::FlagEsp ) )
+        return true;
+
+
+    /* Otherwise, if it's a GPT table, Boot (bit 0) is the same as Esp */
+    const PartitionNode* root = candidate;
+    while ( root && !root->isRoot() )
+        root = root->parent();
+
+    // Strange case: no root found, no partition table node?
+    if ( !root )
+        return false;
+
+    const PartitionTable* table = dynamic_cast<const PartitionTable*>( root );
+    return table && ( table->type() == PartitionTable::TableType::gpt ) &&
+        candidate->activeFlags().testFlag( PartitionTable::FlagBoot );
 }
 
 }  // nmamespace PartUtils

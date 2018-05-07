@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014-2015, Teo Mrnjavac <teo@kde.org>
  *   Copyright 2017, Adriaan de Groot <groot@kde.org>
@@ -40,7 +40,6 @@ FinishedPage::FinishedPage( QWidget* parent )
     , ui( new Ui::FinishedPage )
     , m_restartSetUp( false )
 {
-    cDebug() << "FinishedPage()";
     ui->setupUi( this );
 
     ui->mainText->setAlignment( Qt::AlignCenter );

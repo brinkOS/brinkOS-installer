@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014, Teo Mrnjavac <teo@kde.org>
  *
@@ -20,6 +20,7 @@
  *   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "utils/Logger.h"
 #include "keyboardpreview.h"
 
 KeyBoardPreview::KeyBoardPreview( QWidget* parent )
@@ -113,10 +114,16 @@ bool KeyBoardPreview::loadCodes() {
     process.setEnvironment(QStringList() << "LANG=C" << "LC_MESSAGES=C");
     process.start("ckbcomp", param);
     if (!process.waitForStarted())
+    {
+        cWarning() << "ckbcomp not found , keyboard preview disabled";
         return false;
+    }
 
     if (!process.waitForFinished())
+    {
+        cWarning() << "ckbcomp failed, keyboard preview disabled";
         return false;
+    }
 
     // Clear codes
     codes.clear();
@@ -153,9 +160,9 @@ bool KeyBoardPreview::loadCodes() {
 
 QString KeyBoardPreview::fromUnicodeString(QString raw) {
     if (raw.startsWith("U+"))
-        return QChar(raw.mid(2).toInt(0, 16));
+        return QChar(raw.mid(2).toInt(nullptr, 16));
     else if (raw.startsWith("+U"))
-        return QChar(raw.mid(3).toInt(0, 16));
+        return QChar(raw.mid(3).toInt(nullptr, 16));
 
     return "";
 }

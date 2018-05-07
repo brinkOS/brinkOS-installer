@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2017, Adriaan de Groot <groot@kde.org>
  *
@@ -46,17 +46,10 @@ public:
     explicit PlasmaLnfPage( QWidget* parent = nullptr );
 
     void setLnfPath( const QString& path );
-    /** @brief enable only the listed themes.
-     *
-     * Shows the listed @p themes with full information (e.g. screenshot).
-     * If @p showAll is true, then also show all installed themes
-     * not explicitly listed (without a screenshot).
-     */
-    void setEnabledThemes( const ThemeInfoList& themes, bool showAll );
+    /** @brief enable only the listed themes. */
+    void setEnabledThemes( const ThemeInfoList& themes );
     /** @brief enable all installed plasma themes. */
     void setEnabledThemesAll();
-    /** @brief set which theme is to be preselected. */
-    void setPreselect( const QString& id );
 
 signals:
     void plasmaThemeSelected( const QString& id );
@@ -71,8 +64,6 @@ private:
 
     Ui::PlasmaLnfPage* ui;
     QString m_lnfPath;
-    QString m_preselect;
-    bool m_showAll;  // If true, don't winnow according to enabledThemes
     ThemeInfoList m_enabledThemes;
 
     QButtonGroup *m_buttonGroup;

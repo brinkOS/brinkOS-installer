@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2017, Adriaan de Groot <groot@kde..org>
  *
@@ -52,7 +52,7 @@ public:
 
     void onLeave() override;
 
-    QList<Calamares::job_ptr> jobs() const override;
+    Calamares::JobList jobs() const override;
 
     void setConfigurationMap( const QVariantMap& configurationMap ) override;
 
@@ -61,9 +61,9 @@ public slots:
 
 private:
     PlasmaLnfPage* m_widget;
-    QString m_lnfPath;  // Path to the lnf tool
-    QString m_themeId;  // Id of selected theme
-    QString m_liveUser; // Name of the live user (for OEM mode)
+    QString m_lnfPath;
+    QString m_themeId;
+    QString m_liveUser;
 };
 
 CALAMARES_PLUGIN_FACTORY_DECLARATION( PlasmaLnfViewStepFactory )

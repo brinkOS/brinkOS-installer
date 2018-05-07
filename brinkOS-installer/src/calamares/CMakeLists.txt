@@ -18,10 +18,6 @@ set( calamaresSources
     progresstree/ViewStepItem.cpp
 )
 
-set( calamaresUi
-    #nothing to do here
-)
-
 include_directories(
     .
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -33,21 +29,26 @@ include_directories(
 
 include( GNUInstallDirs )
 
-qt5_wrap_ui( calamaresUi_H ${calamaresUi} )
-
 # Translations
 include( CalamaresAddTranslations )
 add_calamares_translations( ${CALAMARES_TRANSLATION_LANGUAGES} )
 
-set( final_src ${calamaresUi_H} ${calamaresSources} ${calamaresRc} ${trans_outfile} )
+set( final_src ${calamaresSources} ${calamaresRc} ${trans_outfile} )
 
 add_executable( calamares_bin ${final_src} )
-SET_TARGET_PROPERTIES(calamares_bin
+set_target_properties(calamares_bin
     PROPERTIES
         AUTOMOC TRUE
         ENABLE_EXPORTS TRUE
         RUNTIME_OUTPUT_NAME calamares
 )
+
+if( WITH_KF5Crash )
+    set( LINK_LIBRARIES
+        KF5::CoreAddons
+        KF5::Crash
+    )
+endif()
 
 target_link_libraries( calamares_bin
     PRIVATE

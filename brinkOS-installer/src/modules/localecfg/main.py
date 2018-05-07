@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# === This file is part of Calamares - <http://github.com/calamares> ===
+# === This file is part of Calamares - <https://github.com/calamares> ===
 #
 #   Copyright 2014, Anke Boersma <demm@kaosx.us>
 #   Copyright 2015, Philip Müller <philm@manjaro.org>
@@ -65,12 +65,12 @@ def run():
         with open("{!s}/etc/locale.gen".format(install_path), "w") as gen:
             for line in text:
                 # always enable en_US
-                if en_us_locale in line and line[0] == "#":
+                if line.startswith("#" + en_us_locale):
                     # uncomment line
                     line = line[1:].lstrip()
 
                 for locale_value in locale_values:
-                    if locale_value in line and line[0] == "#":
+                    if line.startswith("#" + locale_value):
                         # uncomment line
                         line = line[1:].lstrip()
 

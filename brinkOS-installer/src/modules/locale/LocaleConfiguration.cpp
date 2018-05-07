@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2016, Teo Mrnjavac <teo@kde.org>
  *   Copyright 2017, Adriaan de Groot <groot@kde.org>
@@ -43,11 +43,9 @@ LocaleConfiguration::fromLanguageAndLocation( const QString& languageLocale,
                                               const QStringList& availableLocales,
                                               const QString& countryCode )
 {
-    LocaleConfiguration lc;
-
-    // Note that the documentation how this works is in packages.conf
+    LocaleConfiguration lc = LocaleConfiguration();
     QString language = languageLocale.split( '_' ).first();
-    lc.myLanguageLocaleBcp47 = QLocale(language).bcp47Name().toLower();
+    lc.myLanguageLocaleBcp47 = QLocale(language).bcp47Name();
 
     QStringList linesForLanguage;
     for ( const QString &line : availableLocales )
@@ -290,7 +288,7 @@ LocaleConfiguration::isEmpty() const
 
 
 QMap< QString, QString >
-LocaleConfiguration::toMap() const
+LocaleConfiguration::toMap()
 {
     QMap< QString, QString > map;
 
@@ -325,10 +323,4 @@ LocaleConfiguration::toMap() const
         map.insert( "LC_IDENTIFICATION", lc_identification );
 
     return map;
-}
-
-QString
-LocaleConfiguration::toBcp47() const
-{
-    return myLanguageLocaleBcp47;
 }

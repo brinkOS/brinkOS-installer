@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2013-2016, Teo Mrnjavac <teo@kde.org>
  *
@@ -24,6 +24,7 @@
 #include "CalamaresUtils.h"
 
 #include "CalamaresConfig.h"
+#include "Logger.h"
 
 #include <QCoreApplication>
 #include <QDebug>
@@ -166,11 +167,11 @@ installTranslator( const QLocale& locale,
                                    "_",
                                    brandingTranslationsDir.absolutePath() ) )
             {
-                qDebug() << "Translation: Branding component: Using system locale:" << localeName;
+                cDebug() << "Translation: Branding using locale:" << localeName;
             }
             else
             {
-                qDebug() << "Translation: Branding component: Using default locale, system locale one not found:" << localeName;
+                cDebug() << "Translation: Branding using default, system locale not found:" << localeName;
                 translator->load( brandingTranslationsPrefix + "en" );
             }
 
@@ -189,11 +190,11 @@ installTranslator( const QLocale& locale,
     translator = new QTranslator( parent );
     if ( translator->load( QString( ":/lang/calamares_" ) + localeName ) )
     {
-        qDebug() << "Translation: Calamares: Using system locale:" << localeName;
+        cDebug() << "Translation: Calamares using locale:" << localeName;
     }
     else
     {
-        qDebug() << "Translation: Calamares: Using default locale, system locale one not found:" << localeName;
+        cDebug() << "Translation: Calamares using default, system locale not found:" << localeName;
         translator->load( QString( ":/lang/calamares_en" ) );
     }
 
@@ -326,5 +327,77 @@ crash()
     *a = 1;
 }
 
+bool
+getBool( const QVariantMap& map, const QString& key, bool d )
+{
+    bool result = d;
+    if ( map.contains( key ) )
+    {
+        auto v = map.value( key );
+        if ( v.type() == QVariant::Bool )
+            result = v.toBool();
+    }
+
+    return result;
+}
+
+QString
+getString(const QVariantMap& map, const QString& key)
+{
+    if ( map.contains( key ) )
+    {
+        auto v = map.value( key );
+        if ( v.type() == QVariant::String )
+            return v.toString();
+    }
+    return QString();
+}
+
+int
+getInteger( const QVariantMap& map, const QString& key, int d )
+{
+    int result = d;
+    if ( map.contains( key ) )
+    {
+        auto v = map.value( key );
+        if ( v.type() == QVariant::Int )
+            result = v.toInt();
+    }
+
+    return result;
+}
+
+double
+getDouble( const QVariantMap& map, const QString& key, double d )
+{
+    double result = d;
+    if ( map.contains( key ) )
+    {
+        auto v = map.value( key );
+        if ( v.type() == QVariant::Int )
+            result = v.toInt();
+        else if ( v.type() == QVariant::Double )
+            result = v.toDouble();
+    }
+
+    return result;
+}
+
+QVariantMap
+getSubMap( const QVariantMap& map, const QString& key, bool& success )
+{
+    success = false;
+
+    if ( map.contains( key ) )
+    {
+        auto v = map.value( key );
+        if ( v.type() == QVariant::Map )
+        {
+            success = true;
+            return v.toMap();
+        }
+    }
+    return QVariantMap();
+}
 
 }

@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014-2015, Teo Mrnjavac <teo@kde.org>
  *   Copyright 2017-2018, Adriaan de Groot <groot@kde.org>
@@ -123,9 +123,10 @@ signals:
 
 private:
     explicit ViewManager( QObject* parent = nullptr );
-    virtual ~ViewManager();
+    virtual ~ViewManager() override;
 
     void insertViewStep( int before, ViewStep* step );
+    void updateButtonLabels();
 
     static ViewManager* s_instance;
 

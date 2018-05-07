@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014-2015, Teo Mrnjavac <teo@kde.org>
  *
@@ -126,7 +126,7 @@ ClearMountsJob::exec()
         }
     }
     else
-        cDebug() << "WARNING: this system does not seem to have LVM2 tools.";
+        cWarning() << "this system does not seem to have LVM2 tools.";
 
     // Then we go looking for volume groups that use this device for physical volumes
     process.start( "pvdisplay", { "-C", "--noheadings" } );
@@ -159,7 +159,7 @@ ClearMountsJob::exec()
         }
     }
     else
-        cDebug() << "WARNING: this system does not seem to have LVM2 tools.";
+        cWarning() << "this system does not seem to have LVM2 tools.";
 
     const QStringList cryptoDevices2 = getCryptoDevices();
     for ( const QString &mapperPath : cryptoDevices2 )

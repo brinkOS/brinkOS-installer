@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014, Teo Mrnjavac <teo@kde.org>
  *   Copyright 2017, Adriaan de Groot <groot@kde.org>
@@ -111,7 +111,7 @@ yamlMapToVariant( const YAML::Node& mapNode )
 void
 explainYamlException( const YAML::Exception& e, const QByteArray& yamlData, const char *label )
 {
-    cDebug() << "WARNING: YAML error " << e.what() << "in" << label << '.';
+    cWarning() << "YAML error " << e.what() << "in" << label << '.';
     if ( ( e.mark.line >= 0 ) && ( e.mark.column >= 0 ) )
     {
         // Try to show the line where it happened.
@@ -141,7 +141,7 @@ explainYamlException( const YAML::Exception& e, const QByteArray& yamlData, cons
             rangeend = rangestart + 40;
 
         if ( linestart >= 0 )
-            cDebug() << "WARNING: offending YAML data:" << yamlData.mid( rangestart, rangeend-rangestart ).constData();
+            cWarning() << "offending YAML data:" << yamlData.mid( rangestart, rangeend-rangestart ).constData();
 
     }
 }

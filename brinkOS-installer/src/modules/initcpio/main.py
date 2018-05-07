@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# === This file is part of Calamares - <http://github.com/calamares> ===
+# === This file is part of Calamares - <https://github.com/calamares> ===
 #
 #   Copyright 2014, Philip Müller <philm@manjaro.org>
 #
@@ -19,10 +19,7 @@
 #   along with Calamares. If not, see <http://www.gnu.org/licenses/>.
 
 import libcalamares
-import subprocess
-from libcalamares.utils import check_target_env_call, target_env_call
-from libcalamares.utils import *
-
+from libcalamares.utils import check_target_env_call
 
 
 def run_mkinitcpio():
@@ -36,9 +33,6 @@ def run():
 
     :return:
     """
-    root_mount_point = libcalamares.globalstorage.value("rootMountPoint")
-    subprocess.check_call(["cp", "/run/archiso/bootmnt/arch/boot/x86_64/vmlinuz", root_mount_point + "/boot/vmlinuz-linux"])
     run_mkinitcpio()
-    target_env_call(["/etc/brinkOS-assets/postinstall.sh"])
 
     return None

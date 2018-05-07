@@ -1,4 +1,4 @@
-/* === This file is part of Calamares - <http://github.com/calamares> ===
+/* === This file is part of Calamares - <https://github.com/calamares> ===
  *
  *   Copyright 2014-2017, Teo Mrnjavac <teo@kde.org>
  *   Copyright 2017, Adriaan de Groot <groot@kde.org>
@@ -259,7 +259,7 @@ doReplacePartition( PartitionCoreModule* core,
     if ( partition->roles().has( PartitionRole::Unallocated ) )
     {
         newRoles = PartitionRole( PartitionRole::Primary );
-        cDebug() << "WARNING: selected partition is free space";
+        cWarning() << "selected partition is free space";
         if ( partition->parent() )
         {
             Partition* parent = dynamic_cast< Partition* >( partition->parent() );
