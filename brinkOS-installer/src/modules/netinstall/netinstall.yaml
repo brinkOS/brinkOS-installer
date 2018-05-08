@@ -55,6 +55,7 @@
     - modemmanager
     - mtools
     - net-tools
+    - networkmanager
     - ntfs-3g
     - ntp
     - openssh
