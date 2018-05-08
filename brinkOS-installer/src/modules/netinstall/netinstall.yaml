@@ -107,6 +107,7 @@
   selected: true
   packages:
     - brinkOS-antigen
+    - brinkOS-etcher
     - brinkOS-libcgroup
     - brinkOS-nemo-compare
     - brinkOS-networkmanager-ssh
