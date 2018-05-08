@@ -12,6 +12,7 @@
     - bash-completion
     - bind-tools
     - brinkOS-assets
+    - brinkOS-cower
     - brinkOS-google-chrome
     - brinkOS-icons
     - brinkOS-liquidprompt
@@ -20,6 +21,7 @@
     - brinkOS-plymouth-theme
     - brinkOS-terminal
     - brinkOS-theme
+    - brinkOS-vim-dein
     - brinkOS-wallpapers
     - broadcom-wl-dkms
     - cinnamon
