@@ -11,10 +11,12 @@
     - base
     - bash-completion
     - bind-tools
+    - brinkOS-aic94xx-firmware
     - brinkOS-assets
     - brinkOS-cower
     - brinkOS-google-chrome
     - brinkOS-icons
+    - brinkOS-lha
     - brinkOS-liquidprompt
     - brinkOS-mkinitcpio-openswap
     - brinkOS-pamac
@@ -24,6 +26,7 @@
     - brinkOS-theme
     - brinkOS-vim-dein
     - brinkOS-wallpapers
+    - brinkOS-wd719x-firmware
     - broadcom-wl-dkms
     - cinnamon
     - crda
