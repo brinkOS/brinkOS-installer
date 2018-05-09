@@ -16,6 +16,7 @@
     - brinkOS-google-chrome
     - brinkOS-icons
     - brinkOS-liquidprompt
+    - brinkOS-mkinitcpio-openswap
     - brinkOS-pamac
     - brinkOS-plymouth
     - brinkOS-plymouth-theme
@@ -23,7 +24,7 @@
     - brinkOS-theme
     - brinkOS-vim-dein
     - brinkOS-wallpapers
-    - broadcom-wl
+    - broadcom-wl-dkms
     - cinnamon
     - crda
     - docker
@@ -33,6 +34,7 @@
     - exfat-utils
     - fakeroot
     - fuse-exfat
+    - gnome-keyring
     - gnome-screenshot
     - grub
     - gtkmm3
@@ -47,6 +49,7 @@
     - lightdm
     - lightdm-gtk-greeter
     - linux-firmware
+    - linux-headers
     - mesa
     - mesa
     - mesa-libgl
