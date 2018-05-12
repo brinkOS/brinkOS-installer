@@ -12,6 +12,7 @@
     - bash-completion
     - bind-tools
     - brinkOS-aic94xx-firmware
+    - brinkOS-antigen
     - brinkOS-assets
     - brinkOS-cower
     - brinkOS-google-chrome
@@ -49,6 +50,7 @@
     - icu
     - ipw2100-fw
     - ipw2200-fw
+    - lastpass-cli
     - libmtp
     - lightdm
     - lightdm-gtk-greeter
