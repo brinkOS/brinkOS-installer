@@ -32,6 +32,7 @@
     - broadcom-wl-dkms
     - cinnamon
     - crda
+    - cronie
     - docker
     - docker-compose
     - dosfstools
