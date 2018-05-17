@@ -150,7 +150,7 @@ CreateUserJob::exec()
              targetEnvCall( { "useradd",
                               "-m",
                               "-s",
-                              "/bin/bash",
+                              "/bin/zsh",
                               "-U",
                               "-c",
                               m_fullName,
