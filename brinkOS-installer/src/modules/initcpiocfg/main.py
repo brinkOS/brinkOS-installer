@@ -101,7 +101,7 @@ def modify_mkinitcpio_conf(partitions, root_mount_point):
     swap_uuid = ""
     btrfs = ""
     lvm2 = ""
-    hooks = ["base", "udev", "autodetect", "modconf", "block", "keyboard",
+    hooks = ["base", "udev", "block", "autodetect", "modconf", "keyboard",
              "keymap"]
     modules = []
     files = []
