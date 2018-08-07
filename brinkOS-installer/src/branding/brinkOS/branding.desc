@@ -4,9 +4,9 @@ componentName:  brinkOS
 strings:
     productName:         brinkOS
     shortProductName:    brinkOS
-    version:             2018.05.01
+    version:             2018.08.01
     shortVersion:        latest
-    versionedName:       brinkOS 2018.05.01 latest
+    versionedName:       brinkOS 2018.08.01 latest
     shortVersionedName:  brinkOS latest
     bootloaderEntryName: brinkOS
 
